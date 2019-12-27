@@ -1,0 +1,22 @@
+:root {
+  --ifm-color-primary: #dc332d;
+  --ifm-color-primary-dark: #cc2822;
+  --ifm-color-primary-darker: #c12620;
+  --ifm-color-primary-darkest: #9f1f1a;
+  --ifm-color-primary-light: #e04944;
+  --ifm-color-primary-lighter: #e2544f;
+  --ifm-color-primary-lightest: #e77571;
+  --ifm-code-font-size: 95%;
+  --ifm-font-size-base: 1em;
+}
+
+.docusaurus-highlight-code-line {
+  background-color: rgb(72, 77, 91);
+  display: block;
+  margin: 0 calc(-1 * var(--ifm-pre-padding));
+  padding: 0 var(--ifm-pre-padding);
+}
+
+.footer {
+  text-align: center;
+}
