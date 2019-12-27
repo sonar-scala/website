@@ -10,13 +10,31 @@ const features = [
   [
     {
       title: <>Out-of-the-box Scalastyle integration</>,
-      imageUrls: ["img/"],
-      description: <>...</>
+      imageUrls: ["img/scalastyle.png"],
+      description: (
+        <>
+          Sonar-scala provides 65 built-in{" "}
+          <a href="http://www.scalastyle.org/http://www.scalastyle.org">
+            Scalastyle
+          </a>{" "}
+          inspections, which are automatically checked on SonarQube analysis -
+          no extra setup required.
+        </>
+      )
     },
     {
       title: <>Support for Scapegoat</>,
-      imageUrls: ["img/"],
-      description: <>...</>
+      imageUrls: ["img/scapegoat.png"],
+      description: (
+        <>
+          Sonar-scala provides a seamless integration with{" "}
+          <a href="https://github.com/sksamuel/scapegoat">Scapegoat</a>.
+          Generate a Scapegoat report by running <code>sbt scapegoat</code> and
+          sonar-scala will process it and create issues in SonarQube based on
+          your quality profile. 118 Scapegoat inspections are supported by
+          sonar-scala.
+        </>
+      )
     }
   ],
   [
@@ -28,11 +46,30 @@ const features = [
   ],
   [
     {
+      title: <>Support for Scoverage</>,
+      imageUrls: ["img/"],
+      description: <>...</>
+    },
+    {
+      title: <>Minimal setup effort</>,
+      imageUrls: ["img/"],
+      description: (
+        <>
+          Thanks to provided Docker <a href="">images</a> of SonarQube with
+          bundled sonar-scala and a dedicated sbt plugin,{" "}
+          <a href="https://github.com/mwz/sbt-sonar">sbt-sonar</a>, you can be
+          up and running and scanning your projects in a matter of minutes.
+        </>
+      )
+    }
+  ],
+  [
+    {
       title: (
         <>
           GitHub pull request decoration{" "}
           <sup>
-            <span class="badge badge--danger">New!</span>
+            <span className="badge badge--danger">New!</span>
           </sup>
         </>
       ),
@@ -51,9 +88,9 @@ function Feature({ imageUrls, title, description }) {
     <div className={classnames("col", styles.feature)}>
       {!imgs.isEmpty && (
         <div className="text--center">
-          <div class="row">
+          <div className="row">
             {imgs.map((img, i) => (
-              <div class="col">
+              <div className="col">
                 <img
                   className={styles.featureImage}
                   src={useBaseUrl(img)}
@@ -103,7 +140,7 @@ function Home() {
               {features.map((items, i) => (
                 <div className="row padding-vert--lg">
                   {items.map((item, j) => (
-                    <Feature key={i * 10 + j} {...item} />
+                    <Feature key={i * 100 + j} {...item} />
                   ))}
                 </div>
               ))}

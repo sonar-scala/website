@@ -16,7 +16,7 @@ module.exports = {
         src: "img/logo.svg"
       },
       links: [
-        { to: "docs/doc1", label: "Docs", position: "left" },
+        // { to: "docs/doc1", label: "Docs", position: "left" },
         {
           href: "https://github.com/mwz/sonar-scala",
           label: "GitHub",
@@ -33,11 +33,11 @@ module.exports = {
           items: [
             {
               label: "Get started",
-              to: "docs/doc1"
+              to: ""
             },
             {
               label: "Releases",
-              to: "docs/doc2"
+              to: ""
             }
           ]
         },
