@@ -14,9 +14,10 @@ jobs:
         run: |
           git status
           git remote -v
-          echo $GITHUB_ACTOR
       - uses: actions/setup-node@v1
         with:
           node-version: 10.x
       - run: npm install
-      - run: npm run build
+      - run: npm run deploy
+        env:
+          GIT_USER: $GITHUB_ACTOR
