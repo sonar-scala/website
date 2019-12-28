@@ -120,7 +120,7 @@ $ sbt -Dsonar.host.url=http://localhost \\
 ];
 
 function Feature({ imageUrls, codeSnippet, title, description }) {
-  const imgs = imageUrls ? imageUrls.map(img => useBaseUrl(img)) : [];
+  const imgs = imageUrls ? imageUrls : [];
   return (
     <div className={classnames("col", styles.col)}>
       {!imgs.isEmpty && !codeSnippet && (
@@ -128,11 +128,7 @@ function Feature({ imageUrls, codeSnippet, title, description }) {
           <div className="row padding-bottom--md">
             {imgs.map(img => (
               <div className="col">
-                <img
-                  className={styles.featureImage}
-                  src={useBaseUrl(img)}
-                  alt={title}
-                />
+                <img className={styles.featureImage} src={img} alt={title} />
               </div>
             ))}
           </div>
@@ -159,7 +155,7 @@ function Home() {
     >
       <header className={classnames("hero hero--primary", styles.heroBanner)}>
         <div className="container">
-          <img src={useBaseUrl("img/logo.svg")} />
+          <img src="img/logo.svg" />
           <h1 className="hero__title">{siteConfig.title}</h1>
           <p className="hero__subtitle">{siteConfig.tagline}</p>
           <div className={styles.buttons}>
@@ -168,7 +164,7 @@ function Home() {
                 "button button--lg button--secondary",
                 styles.getStarted
               )}
-              to={useBaseUrl("docs/doc1")}
+              to={"docs/about"}
             >
               Get Started
             </Link>
