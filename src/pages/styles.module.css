@@ -28,10 +28,10 @@
     padding-bottom: 2rem;
     padding-top: 2rem;
   }
-  .row :first-child {
+  .row :first-child.col {
     padding-top: 0rem;
   }
-  .row :last-child {
+  .row :last-child.col {
     padding-bottom: 0rem;
   }
 }

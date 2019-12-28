@@ -1,9 +1,10 @@
-import React from "react";
-import classnames from "classnames";
-import Layout from "@theme/Layout";
 import Link from "@docusaurus/Link";
-import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import useBaseUrl from "@docusaurus/useBaseUrl";
+import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
+import Highlight from "@theme/CodeBlock";
+import Layout from "@theme/Layout";
+import classnames from "classnames";
+import React from "react";
 import styles from "./styles.module.css";
 
 const features = [
@@ -29,10 +30,9 @@ const features = [
         <>
           Sonar-scala provides a seamless integration with{" "}
           <a href="https://github.com/sksamuel/scapegoat">Scapegoat</a>.
-          Generate a Scapegoat report by running <code>sbt scapegoat</code> and
-          sonar-scala will process it and create issues in SonarQube based on
-          your quality profile. 118 Scapegoat inspections are supported by
-          sonar-scala.
+          Generate a Scapegoat report and sonar-scala will process it and create
+          issues in SonarQube based on your quality profile. There are 118
+          Scapegoat inspections that are supported by sonar-scala.
         </>
       )
     }
@@ -55,19 +55,41 @@ const features = [
   ],
   [
     {
-      title: <>Support for Scoverage</>,
-      imageUrls: ["img/"],
-      description: <>...</>
-    },
+      title: <>Coverage and unit test metrics</>,
+      imageUrls: ["img/scoverage.png"],
+      description: (
+        <>
+          Sonar-scala integrates with{" "}
+          <a href="http://scoverage.org">Scoverage</a> and reports coverage
+          results back to SonarQube. It also reads JUnit-style reports produced
+          by testing frameworks like{" "}
+          <a href="http://www.scalatest.org">ScalaTest</a> or{" "}
+          <a href="https://etorreborre.github.io/specs2">Specs2</a> and turns
+          those into test metrics in SonarQube.
+        </>
+      )
+    }
+  ],
+  [
     {
       title: <>Minimal setup effort</>,
-      imageUrls: ["img/"],
+      codeSnippet: (
+        <Highlight>
+          {`
+$ docker run -p 80:9000 -d \\
+  mwizner/sonarqube-scala-plugins:4.1.0-full
+
+$ sbt -Dsonar.host.url=http://localhost \\
+  clean coverage test coverageReport scapegoat sonarScan
+            `}
+        </Highlight>
+      ),
       description: (
         <>
           Thanks to provided Docker <a href="">images</a> of SonarQube with
           bundled sonar-scala and a dedicated sbt plugin,{" "}
           <a href="https://github.com/mwz/sbt-sonar">sbt-sonar</a>, you can be
-          up and running and scanning your projects in a matter of minutes.
+          up and running and try out sonar-scala in a matter of minutes.
         </>
       )
     }
@@ -86,19 +108,25 @@ const features = [
         "img/pr-decoration-example.png",
         "img/pr-decoration-status-check.png"
       ],
-      description: <>...</>
+      description: (
+        <>
+          Sonar-scala can be run in a "decoration mode", which will analyse a
+          pull request on GitHub and any new issues introduced in the code base
+          will be posted as inline comments directly on the pull request.
+        </>
+      )
     }
   ]
 ];
 
-function Feature({ imageUrls, title, description }) {
-  const imgs = imageUrls.map((img, i) => useBaseUrl(img));
+function Feature({ imageUrls, codeSnippet, title, description }) {
+  const imgs = imageUrls ? imageUrls.map(img => useBaseUrl(img)) : [];
   return (
     <div className={classnames("col", styles.col)}>
-      {!imgs.isEmpty && (
+      {!imgs.isEmpty && !codeSnippet && (
         <div className="text--center">
-          <div className="row">
-            {imgs.map((img, i) => (
+          <div className="row padding-bottom--md">
+            {imgs.map(img => (
               <div className="col">
                 <img
                   className={styles.featureImage}
@@ -108,6 +136,11 @@ function Feature({ imageUrls, title, description }) {
               </div>
             ))}
           </div>
+        </div>
+      )}
+      {codeSnippet && (
+        <div className="row padding-bottom--md">
+          <div className="col">{codeSnippet}</div>
         </div>
       )}
       <h3>{title}</h3>

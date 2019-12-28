@@ -24,9 +24,11 @@ module.exports = {
         }
       ]
     },
+    prism: {
+      theme: require("prism-react-renderer/themes/github")
+    },
     sidebarCollapsible: false,
     footer: {
-      style: "dark",
       links: [
         {
           title: "Docs",
