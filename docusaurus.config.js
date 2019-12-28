@@ -2,8 +2,8 @@ module.exports = {
   title: "sonar-scala",
   tagline:
     "A free and open-source SonarQube plugin for static code analysis of Scala projects",
-  url: "https://sonar-scala.com",
-  baseUrl: "/",
+  url: "https://sonar-scala.github.io",
+  baseUrl: "/website/",
   favicon: "img/favicon.ico",
   organizationName: "sonar-scala",
   projectName: "website",
