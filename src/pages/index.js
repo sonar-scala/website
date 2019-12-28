@@ -41,7 +41,16 @@ const features = [
     {
       title: <>Built-in quality profiles for Scala</>,
       imageUrls: ["img/quality-profiles.png"],
-      description: <>...</>
+      description: (
+        <>
+          Sonar-scala provides two rules repositories and four built-in quality
+          profiles - one for <code>Scalastyle</code>, one for{" "}
+          <code>Scapegoat</code> as well as a combination of those two:{" "}
+          <code>Scalastyle+Scapegoat</code> and the{" "}
+          <code>Recommended by sonar-scala</code> profile, which is a subset of
+          those that we recommend for the best results.
+        </>
+      )
     }
   ],
   [
