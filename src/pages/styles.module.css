@@ -20,6 +20,18 @@
 .features {
   display: flex;
   align-items: center;
-  padding: 2rem 0;
   width: 100%;
+}
+
+@media (max-width: 966px) {
+  .row .col {
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+  }
+  .row :first-child {
+    padding-top: 0rem;
+  }
+  .row :last-child {
+    padding-bottom: 0rem;
+  }
 }

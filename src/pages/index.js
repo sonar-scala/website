@@ -94,7 +94,7 @@ const features = [
 function Feature({ imageUrls, title, description }) {
   const imgs = imageUrls.map((img, i) => useBaseUrl(img));
   return (
-    <div className={classnames("col", styles.feature)}>
+    <div className={classnames("col", styles.col)}>
       {!imgs.isEmpty && (
         <div className="text--center">
           <div className="row">
@@ -147,7 +147,9 @@ function Home() {
           <section className={styles.features}>
             <div className="container">
               {features.map((items, i) => (
-                <div className="row padding-vert--lg">
+                <div
+                  className={classnames("row", "padding-vert--lg", styles.row)}
+                >
                   {items.map((item, j) => (
                     <Feature key={i * 100 + j} {...item} />
                   ))}
