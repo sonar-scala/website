@@ -15,8 +15,6 @@ jobs:
           git config --global user.name "${GITHUB_ACTOR}"
           git config --global user.email "${GITHUB_ACTOR}@users.noreply.github.com"
           echo "machine github.com login ${GITHUB_ACTOR} password ${{ secrets.GITHUB_TOKEN }}" > ~/.netrc
-          git status
-          git remote -v
       - uses: actions/setup-node@v1
         with:
           node-version: 10.x
