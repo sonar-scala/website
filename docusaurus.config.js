@@ -9,6 +9,7 @@ module.exports = {
   projectName: "website",
   themeConfig: {
     disableDarkMode: true,
+    image: "img/logo.png",
     navbar: {
       title: "sonar-scala",
       logo: {
