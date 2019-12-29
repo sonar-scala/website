@@ -35,11 +35,11 @@ module.exports = {
           items: [
             {
               label: "Get started",
-              to: ""
+              to: "https://github.com/mwz/sonar-scala#--sonar-scala"
             },
             {
               label: "Releases",
-              to: ""
+              to: "https://github.com/mwz/sonar-scala/releases"
             }
           ]
         },

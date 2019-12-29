@@ -86,8 +86,9 @@ $ sbt -Dsonar.host.url=http://localhost \\
       ),
       description: (
         <>
-          Thanks to provided Docker <a href="">images</a> of SonarQube with
-          bundled sonar-scala and a dedicated sbt plugin,{" "}
+          Thanks to provided Docker{" "}
+          <a href="https://github.com/mwz/sonar-scala-docker">images</a> of
+          SonarQube with bundled sonar-scala and a dedicated sbt plugin,{" "}
           <a href="https://github.com/mwz/sbt-sonar">sbt-sonar</a>, you can be
           up and running and try out sonar-scala in a matter of minutes.
         </>
@@ -110,8 +111,8 @@ $ sbt -Dsonar.host.url=http://localhost \\
       ],
       description: (
         <>
-          Sonar-scala can be run in a "decoration mode", which will analyse a
-          pull request on GitHub and any new issues introduced in the code base
+          Sonar-scala can be run in a "decoration mode", which can analyse your
+          pull requests on GitHub and any new issues introduced in the code base
           will be posted as inline comments directly on the pull request.
         </>
       )
