@@ -17,10 +17,15 @@ module.exports = {
         src: "img/logo.svg"
       },
       links: [
-        // { to: "docs/doc1", label: "Docs", position: "left" },
+        { to: "docs/changelog", label: "Changelog", position: "right" },
         {
           href: "https://github.com/mwz/sonar-scala",
           label: "GitHub",
+          position: "right"
+        },
+        {
+          href: "https://gitter.im/sonar-scala/sonar-scala",
+          label: "Chat",
           position: "right"
         }
       ]
@@ -53,7 +58,7 @@ module.exports = {
                 "https://github.com/mwz/sonar-scala/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc"
             },
             {
-              label: "Gitter",
+              label: "Chat on Gitter",
               href: "https://gitter.im/sonar-scala/sonar-scala"
             }
           ]
