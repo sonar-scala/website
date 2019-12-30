@@ -12,13 +12,13 @@ jobs:
       - uses: actions/checkout@v1
       - name: configure git
         run: |
-          git config --global user.name "${GITHUB_ACTOR}"
-          git config --global user.email "${GITHUB_ACTOR}@users.noreply.github.com"
-          echo "machine github.com login ${GITHUB_ACTOR} password ${{ secrets.GITHUB_TOKEN }}" > ~/.netrc
+          git config --global user.name "Sonar Scala"
+          git config --global user.email "37594535+sonar-scala-bot@users.noreply.github.com"
+          echo "machine github.com login sonar-scala-bot password ${{ secrets.ACCESS_TOKEN }}" > ~/.netrc
       - uses: actions/setup-node@v1
         with:
           node-version: 10.x
       - run: npm install
       - run: npm run deploy
         env:
-          GIT_USER: $GITHUB_ACTOR
+          GIT_USER: sonar-scala-bot
