@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="generator" content="Docusaurus">
+
+
+<title data-react-helmet="true">Changelog</title>
+
+<meta data-react-helmet="true" http-equiv="x-ua-compatible" content="ie=edge"><meta data-react-helmet="true" property="og:title" content="sonar-scala · A free and open-source SonarQube plugin for static code analysis of Scala projects"><meta data-react-helmet="true" property="og:image" content="https://sonar-scala.com/img/logo.png"><meta data-react-helmet="true" property="twitter:image" content="https://sonar-scala.com/img/logo.png"><meta data-react-helmet="true" name="twitter:image:alt" content="Image for sonar-scala · A free and open-source SonarQube plugin for static code analysis of Scala projects"><meta data-react-helmet="true" name="twitter:card" content="summary"><meta data-react-helmet="true" name="description" content="## [7.8.0 LTS](https://github.com/mwz/sonar-scala/releases/tag/v7.8.0) - 23.12.2019"><meta data-react-helmet="true" property="og:description" content="## [7.8.0 LTS](https://github.com/mwz/sonar-scala/releases/tag/v7.8.0) - 23.12.2019"><meta data-react-helmet="true" property="og:url" content="https://sonar-scala.com/docs/changelog">
+
+<link data-react-helmet="true" rel="shortcut icon" href="/img/favicon.ico">
+
+
+<link rel="stylesheet" href="/styles.47e06976.css">
+
+</head>
+<body>
+
+<div id="__docusaurus">
+<nav class="navbar navbar--light navbar--fixed-top"><div class="navbar__inner"><div class="navbar__items"><div aria-label="Navigation bar toggle" class="navbar__toggle" role="button" tabindex="0"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" role="img" focusable="false"><title>Menu</title><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></div><a aria-current="page" class="navbar__brand active" href="/"><img class="navbar__logo" src="/img/logo.svg" alt="logo"><strong>sonar-scala</strong></a></div><div class="navbar__items navbar__items--right"><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/docs/changelog">Changelog</a><a class="navbar__item navbar__link" target="_blank" rel="noopener noreferrer" href="https://github.com/mwz/sonar-scala">GitHub</a><a class="navbar__item navbar__link" target="_blank" rel="noopener noreferrer" href="https://gitter.im/sonar-scala/sonar-scala">Chat</a></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div><div class="navbar-sidebar"><div class="navbar-sidebar__brand"><a aria-current="page" class="navbar__brand active" href="/"><img class="navbar__logo" src="/img/logo.svg" alt="logo"><strong>sonar-scala</strong></a></div><div class="navbar-sidebar__items"><div class="menu"><ul class="menu__list"><li class="menu__list-item"><a aria-current="page" class="menu__link navbar__link--active" href="/docs/changelog">Changelog</a></li><li class="menu__list-item"><a class="menu__link" target="_blank" rel="noopener noreferrer" href="https://github.com/mwz/sonar-scala">GitHub</a></li><li class="menu__list-item"><a class="menu__link" target="_blank" rel="noopener noreferrer" href="https://gitter.im/sonar-scala/sonar-scala">Chat</a></li></ul></div></div></div></nav><div class="main-wrapper"><div class="docPage_1kjD"><div class="docSidebarContainer_1cYp"><div class="sidebar_1kLs"><div class="menu menu--responsive"><button aria-label="Open Menu" class="button button--secondary button--sm menu__button" type="button"><svg class="sidebarMenuIcon_2vk4" xmlns="http://www.w3.org/2000/svg" height="24" width="24" viewBox="0 0 32 32" role="img" focusable="false"><title>Menu</title><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><ul class="menu__list"><li class="menu__list-item"><a class="menu__link" href="#!">Changelog</a><ul class="menu__list"><li class="menu__list-item"><a aria-current="page" class="menu__link menu__link--active" href="/docs/changelog">Changelog</a></li></ul></li></ul></div></div></div><main class="docMainContainer_FFX1"><div class="padding-vert--lg"><div class="container"><div class="row"><div class="col"><div class="docItemContainer_2cwg"><article><header><h1 class="docTitle_1vWb">Changelog</h1></header><div class="markdown"><h2><a aria-hidden="true" tabindex="-1" class="anchor" id="780-lts---23122019"></a><a aria-hidden="true" tabindex="-1" class="hash-link" href="#780-lts---23122019" title="Direct link to heading">#</a><a href="https://github.com/mwz/sonar-scala/releases/tag/v7.8.0">7.8.0 LTS</a> - 23.12.2019</h2><ul><li>Implemented a new mode for pull request decoration. In this mode, sonar-scala
+will review pull requests on Github and make comments on new issues directly
+in the pull request instead of reporting them to SonarQube.<br>To read more about this feature, see the documentation
+<a href="https://github.com/mwz/sonar-scala#pull-request-decoration-new">here</a>.
+(<a href="https://github.com/mwz/sonar-scala/issues/196">#196</a>,
+<a href="https://github.com/mwz/sonar-scala/issues/316">#316</a>,
+<a href="https://github.com/mwz/sonar-scala/issues/318">#318</a>,
+<a href="https://github.com/mwz/sonar-scala/issues/319">#319</a>,
+<a href="https://github.com/mwz/sonar-scala/issues/324">#324</a> -
+<a href="https://github.com/mwz">@mwz</a>)</li></ul><h2><a aria-hidden="true" tabindex="-1" class="anchor" id="770-lts---11102019"></a><a aria-hidden="true" tabindex="-1" class="hash-link" href="#770-lts---11102019" title="Direct link to heading">#</a><a href="https://github.com/mwz/sonar-scala/releases/tag/v7.7.0">7.7.0 LTS</a> - 11.10.2019</h2><ul><li>Added support for
+<a href="https://www.sonarqube.org/sonarqube-7-9-lts">SonarQube 7.9 LTS</a>.
+(<a href="https://github.com/mwz/sonar-scala/issues/260">#260</a> -
+<a href="https://github.com/mwz">@mwz</a>)</li></ul><h2><a aria-hidden="true" tabindex="-1" class="anchor" id="760---30062019"></a><a aria-hidden="true" tabindex="-1" class="hash-link" href="#760---30062019" title="Direct link to heading">#</a><a href="https://github.com/mwz/sonar-scala/releases/tag/v7.6.0">7.6.0</a> - 30.06.2019</h2><ul><li>Added support for <a href="https://www.sonarqube.org/sonarqube-7-8">SonarQube 7.8</a>.
+(<a href="https://github.com/mwz/sonar-scala/issues/234">#234</a> -
+<a href="https://github.com/mwz">@mwz</a>)</li><li>Updated Scapegoat to
+<a href="https://github.com/sksamuel/scapegoat/compare/v1.3.8...v1.3.9">1.3.9</a>, which
+introduced a new inspection - <code>PreferMapEmpty</code>.
+(<a href="https://github.com/mwz/sonar-scala/issues/227">#227</a> -
+<a href="https://github.com/mwz">@mwz</a>)</li></ul><h2><a aria-hidden="true" tabindex="-1" class="anchor" id="750---25032019"></a><a aria-hidden="true" tabindex="-1" class="hash-link" href="#750---25032019" title="Direct link to heading">#</a><a href="https://github.com/mwz/sonar-scala/releases/tag/v7.5.0">7.5.0</a> - 25.03.2019</h2><ul><li>Added support for <a href="https://www.sonarqube.org/sonarqube-7-7">SonarQube 7.7</a>.
+(<a href="https://github.com/mwz/sonar-scala/issues/182">#182</a> -
+<a href="https://github.com/mwz">@mwz</a>)</li></ul><h2><a aria-hidden="true" tabindex="-1" class="anchor" id="740---11032019"></a><a aria-hidden="true" tabindex="-1" class="hash-link" href="#740---11032019" title="Direct link to heading">#</a><a href="https://github.com/mwz/sonar-scala/releases/tag/v7.4.0">7.4.0</a> - 11.03.2019</h2><ul><li>Added support for <a href="https://www.sonarqube.org/sonarqube-7-6">SonarQube 7.6</a>.
+(<a href="https://github.com/mwz/sonar-scala/issues/152">#152</a> -
+<a href="https://github.com/BalmungSan">@BalmungSan</a>)</li><li>Added an optional <code>sonar.scala.scoverage.disable</code> property, which can be used
+to disable the Scoverage sensor (defaults to <code>false</code>).
+(<a href="https://github.com/mwz/sonar-scala/issues/169">#169</a> -
+<a href="https://github.com/BalmungSan">@BalmungSan</a>)</li></ul><h2><a aria-hidden="true" tabindex="-1" class="anchor" id="680-lts---03032019"></a><a aria-hidden="true" tabindex="-1" class="hash-link" href="#680-lts---03032019" title="Direct link to heading">#</a><a href="https://github.com/mwz/sonar-scala/releases/tag/v6.8.0">6.8.0 LTS</a> - 03.03.2019</h2><ul><li>Backported features and bug fixes from the 7.x series - new unit test metrics
+such as unit test count, duration of each test and the number of skipped and
+failed tests - see the release notes from
+<a href="https://github.com/mwz/sonar-scala/releases/tag/v7.3.0">7.3.0</a> and
+<a href="https://github.com/mwz/sonar-scala/releases/tag/v7.3.1">7.3.1</a> releases for
+more details. (<a href="https://github.com/mwz/sonar-scala/issues/164">#164</a> -
+<a href="https://github.com/mwz">@mwz</a>)</li></ul><h2><a aria-hidden="true" tabindex="-1" class="anchor" id="731---27012019"></a><a aria-hidden="true" tabindex="-1" class="hash-link" href="#731---27012019" title="Direct link to heading">#</a><a href="https://github.com/mwz/sonar-scala/releases/tag/v7.3.1">7.3.1</a> - 27.01.2019</h2><ul><li>Fixed Scalastyle rule lookup for custom rules created from templates.
+(<a href="https://github.com/mwz/sonar-scala/issues/148">#148</a> -
+<a href="https://github.com/satabin">@satabin</a>)</li></ul><h2><a aria-hidden="true" tabindex="-1" class="anchor" id="730---30122018"></a><a aria-hidden="true" tabindex="-1" class="hash-link" href="#730---30122018" title="Direct link to heading">#</a><a href="https://github.com/mwz/sonar-scala/releases/tag/v7.3.0">7.3.0</a> - 30.12.2018</h2><ul><li>Implemented a new sensor which saves unit test metrics such as unit test
+count, duration of each test and the number of skipped and failed tests. To
+use the new sensor, set the <code>sonar.tests</code> property which should point to
+directories containing tests (usually <code>src/test/scala</code>) and make sure you run
+your unit tests before you trigger sonar-scanner analysis. That&#x27;s all you need
+to do in sbt unless you&#x27;ve changed the default location where sbt saves JUnit
+XML reports - then you&#x27;ll also need to set the <code>sonar.junit.reportPaths</code>
+property (which defaults to <code>target/test-reports</code>). For projects using Gradle,
+setting both properties is necessary to make use of the sensor (Gradle outputs
+those in <code>build/test-results/test</code>), and Maven additionally requires the
+Surefire plugin to be installed. Please refer to the
+<a href="https://github.com/mwz/sonar-scala/examples/">sample</a> projects for example
+configuration for each build tool.
+(<a href="https://github.com/mwz/sonar-scala/issues/143">#143</a> -
+<a href="https://github.com/mwz">@mwz</a>)</li><li>Fixed incorrect log messages about missing <code>sonar.scala.version</code> property.
+(<a href="https://github.com/mwz/sonar-scala/issues/139">#139</a> -
+<a href="https://github.com/mwz">@mwz</a>)</li></ul><h2><a aria-hidden="true" tabindex="-1" class="anchor" id="670-lts---09122018"></a><a aria-hidden="true" tabindex="-1" class="hash-link" href="#670-lts---09122018" title="Direct link to heading">#</a><a href="https://github.com/mwz/sonar-scala/releases/tag/v6.7.0">6.7.0 LTS</a> - 09.12.2018</h2><ul><li>Backported features from the 7.x series - new <code>Recommended by sonar-scala</code>
+quality profile and cleaned up Scapegoat rule repository, see the notes from
+<a href="https://github.com/mwz/sonar-scala/releases/tag/v7.2.0">7.2.0</a> release for
+more details. (<a href="https://github.com/mwz/sonar-scala/issues/136">#136</a> -
+<a href="https://github.com/mwz">@mwz</a>)</li></ul><h2><a aria-hidden="true" tabindex="-1" class="anchor" id="720---03122018"></a><a aria-hidden="true" tabindex="-1" class="hash-link" href="#720---03122018" title="Direct link to heading">#</a><a href="https://github.com/mwz/sonar-scala/releases/tag/v7.2.0">7.2.0</a> - 03.12.2018</h2><ul><li>Added a new quality profile <code>Recommended by sonar-scala</code>, which is a
+combination of Scalastyle and Scapegoat rules. We recommend using this profile
+as it excludes any duplicate rules and contains custom instances of Scalastyle
+templates set up in accordance with the current style guides recommended by
+the community. (<a href="https://github.com/mwz/sonar-scala/issues/130">#130</a> -
+<a href="https://github.com/mwz">@mwz</a>)</li><li>Cleaned up Scapegoat rule repository and quality profiles by removing any
+Scapegoat rules which are no longer active in the upstream project.
+(<a href="https://github.com/mwz/sonar-scala/issues/132">#132</a> -
+<a href="https://github.com/mwz">@mwz</a>)</li></ul><h2><a aria-hidden="true" tabindex="-1" class="anchor" id="710---19112018"></a><a aria-hidden="true" tabindex="-1" class="hash-link" href="#710---19112018" title="Direct link to heading">#</a><a href="https://github.com/mwz/sonar-scala/releases/tag/v7.1.0">7.1.0</a> - 19.11.2018</h2><ul><li>Added support for <a href="https://www.sonarqube.org/sonarqube-7-4">SonarQube 7.4</a>.
+(<a href="https://github.com/mwz/sonar-scala/issues/127">#127</a> -
+<a href="https://github.com/mwz">@mwz</a>)</li></ul><h2><a aria-hidden="true" tabindex="-1" class="anchor" id="700---08102018"></a><a aria-hidden="true" tabindex="-1" class="hash-link" href="#700---08102018" title="Direct link to heading">#</a><a href="https://github.com/mwz/sonar-scala/releases/tag/v7.0.0">7.0.0</a> - 08.10.2018</h2><ul><li><p>Added support for <a href="https://www.sonarqube.org/sonarqube-7-3">SonarQube 7.3</a>.
+The current <code>6.x</code> series targeting <em>SonarQube 6.7 LTS</em> will be still
+maintained and will follow the SonarQube LTS lifecycle.
+(<a href="https://github.com/mwz/sonar-scala/issues/120">#120</a> -
+<a href="https://github.com/mwz">@mwz</a>)</p></li><li><p>Removed the following:</p><ul><li><code>sonar.scoverage.reportPath</code> property which was deprecated in
+<a href="https://github.com/mwz/sonar-scala/releases/tag/v6.2.0">6.2.0</a> - please use
+<code>sonar.scala.scoverage.reportPath</code> instead;</li><li>the old Scalastyle quality profile and rule registry which were deprecated
+in <a href="https://github.com/mwz/sonar-scala/releases/tag/v6.6.0">6.6.0</a>;
+(<a href="https://github.com/mwz/sonar-scala/issues/120">#120</a> -
+<a href="https://github.com/mwz">@mwz</a>)</li></ul></li><li><p>Bumped up the default value of the <code>sonar.scala.version</code> property to <code>2.12</code>.
+(<a href="https://github.com/mwz/sonar-scala/issues/120">#120</a> -
+<a href="https://github.com/mwz">@mwz</a>)</p></li></ul><h2><a aria-hidden="true" tabindex="-1" class="anchor" id="660-lts---30092018"></a><a aria-hidden="true" tabindex="-1" class="hash-link" href="#660-lts---30092018" title="Direct link to heading">#</a><a href="https://github.com/mwz/sonar-scala/releases/tag/v6.6.0">6.6.0 LTS</a> - 30.09.2018</h2><ul><li>Refactored Scalastyle module and introduced new Scalastyle rules repository
+along with a new quality profile, which now in addition to the latest
+Scalastyle rules also consists of rule templates which are activated by
+default. The existing Scalastyle quality profile and rule registry have been
+deprecated and will be removed in the next major version of the plugin (7.x).
+The new module also exposes the following optional property
+<code>sonar.scala.scalastyle.disable</code>, which allows you to disable the Scalastyle
+sensor. (<a href="https://github.com/mwz/sonar-scala/issues/35">#35</a> -
+<a href="https://github.com/mwz">@mwz</a>)</li><li>New <code>Scalastyle+Scapegoat</code> quality profile, which includes all of the default
+rules from Scalastyle and Scapegoat quality profiles.
+(<a href="https://github.com/mwz/sonar-scala/issues/112">#112</a> -
+<a href="https://github.com/BalmungSan">@BalmungSan</a>)</li><li>Bumped Scapegoat up to <code>1.3.7</code>, which introduces a new inspection
+(<a href="https://github.com/sksamuel/scapegoat/blob/v1.3.7/src/main/scala/com/sksamuel/scapegoat/inspections/string/UnsafeStringContains.scala">UnsafeStringContains</a>)
+and other various fixes and improvements - see the
+<a href="https://github.com/sksamuel/scapegoat/compare/v1.3.5...v1.3.7">diff</a> for more
+details. (<a href="https://github.com/mwz/sonar-scala/issues/100">#100</a> -
+<a href="https://github.com/mwz">@mwz</a>)</li><li>Scapegoat sensor now also works with absolute file paths in the Scapegoat
+report. (<a href="https://github.com/mwz/sonar-scala/issues/116">#116</a> -
+<a href="https://github.com/mwz">@mwz</a>)</li></ul><h2><a aria-hidden="true" tabindex="-1" class="anchor" id="651-lts---11082018"></a><a aria-hidden="true" tabindex="-1" class="hash-link" href="#651-lts---11082018" title="Direct link to heading">#</a><a href="https://github.com/mwz/sonar-scala/releases/tag/v6.5.1">6.5.1 LTS</a> - 11.08.2018</h2><ul><li>This release fixes an issue with Scapegoat sensor using a single report for
+each module in multi-module projects.
+(<a href="https://github.com/mwz/sonar-scala/issues/96">#96</a> -
+<a href="https://github.com/mwz">@mwz</a>)</li></ul><h2><a aria-hidden="true" tabindex="-1" class="anchor" id="650-lts---09072018"></a><a aria-hidden="true" tabindex="-1" class="hash-link" href="#650-lts---09072018" title="Direct link to heading">#</a><a href="https://github.com/mwz/sonar-scala/releases/tag/v6.5.0">6.5.0 LTS</a> - 09.07.2018</h2><ul><li><p>Introduced support for <a href="https://github.com/sksamuel/scapegoat">Scapegoat</a>
+linter. This version of the plugin ships with a <strong>Scapegoat</strong> rule repository,
+quality profile as well as a new sensor, which reads the xml report generated
+by Scapegoat and submits Scapegoat issues to SonarQube. To use this feature,
+you need to set up Scapegoat in your project and make sure you generate a
+Scapegoat report before running <code>sonar-scanner</code>, see
+<a href="https://github.com/sksamuel/sbt-scapegoat">sbt-scapegoat</a> for SBT
+integration. This feature exposes the following optional properties:</p><ul><li><code>sonar.scala.scapegoat.reportPath</code> - relative path to the scapegoat report
+(defaults to
+<code>target/scala-${sonar.scala.version}/scapegoat-report/scapegoat.xml</code>) and</li><li><code>sonar.scala.scapegoat.disable</code> - which allows you to disable the Scapegoat
+sensor from being executed on your sources (defaults to <code>false</code>)</li></ul><p>A massive thanks to <a href="https://github.com/BalmungSan">@BalmungSan</a> for
+implementing this feature!
+(<a href="https://github.com/mwz/sonar-scala/issues/8">#8</a> -
+<a href="https://github.com/BalmungSan">@BalmungSan</a>, <a href="https://github.com/mwz">@mwz</a>)</p></li></ul><h2><a aria-hidden="true" tabindex="-1" class="anchor" id="640-lts---23052018"></a><a aria-hidden="true" tabindex="-1" class="hash-link" href="#640-lts---23052018" title="Direct link to heading">#</a><a href="https://github.com/mwz/sonar-scala/releases/tag/v6.4.0">6.4.0 LTS</a> - 23.05.2018</h2><ul><li>Improved logging in the Scoverage sensor.
+(<a href="https://github.com/mwz/sonar-scala/issues/61">#61</a> -
+<a href="https://github.com/BalmungSan">@BalmungSan</a>)</li><li>Fixed Scoverage issues with multi-module Gradle projects. Please see the
+<a href="https://github.com/mwz/sonar-scala/tree/master/examples">examples</a> for a
+reference on how to configure Gradle projects and how to execute SonarQube
+analysis. (<a href="https://github.com/mwz/sonar-scala/issues/63">#63</a> -
+<a href="https://github.com/mwz">@mwz</a>)</li></ul><h2><a aria-hidden="true" tabindex="-1" class="anchor" id="630-lts---12052018"></a><a aria-hidden="true" tabindex="-1" class="hash-link" href="#630-lts---12052018" title="Direct link to heading">#</a><a href="https://github.com/mwz/sonar-scala/releases/tag/v6.3.0">6.3.0 LTS</a> - 12.05.2018</h2><ul><li>Use semantic versioning scheme to parse the <code>sonar.scala.version</code> property.
+The patch version is now ignored and <code>2.11</code> and <code>2.12</code> are valid version
+numbers. In case of a missing value or an incorrect version the property
+defaults to <code>2.11.0</code>. (<a href="https://github.com/mwz/sonar-scala/issues/53">#53</a> -
+<a href="https://github.com/BalmungSan">@BalmungSan</a>)</li><li>Fixed an issue which affected Gradle users and caused the sonar sources prefix
+<code>sonar.sources</code> to be appended twice to filenames in the Scoverage report.
+(<a href="https://github.com/mwz/sonar-scala/issues/56">#56</a> -
+<a href="https://github.com/mwz">@mwz</a>)</li></ul><h2><a aria-hidden="true" tabindex="-1" class="anchor" id="620-lts---28042018"></a><a aria-hidden="true" tabindex="-1" class="hash-link" href="#620-lts---28042018" title="Direct link to heading">#</a><a href="https://github.com/mwz/sonar-scala/releases/tag/v6.2.0">6.2.0 LTS</a> - 28.04.2018</h2><ul><li>Added support for multiple source locations configured by the <code>sonar.sources</code>
+property. As per SonarQube
+<a href="https://docs.sonarqube.org/display/SONAR/Analysis+Parameters">documentation</a>,
+the paths should be separated by a comma. Additionally, the paths can now be
+absolute, which allows sonar-scala to work with
+<a href="https://docs.sonarqube.org/display/SCAN/Analyzing+with+SonarQube+Scanner+for+Maven">SonarQube Maven plugin</a>.
+(<a href="https://github.com/mwz/sonar-scala/issues/52">#52</a> -
+<a href="https://github.com/mwz">@mwz</a>)</li><li>The Scoverage report path property <code>sonar.scoverage.reportPath</code> was deprecated
+and will be removed in the next major version. Please use
+<code>sonar.scala.scoverage.reportPath</code> instead.
+(<a href="https://github.com/mwz/sonar-scala/issues/46">#46</a> -
+<a href="https://github.com/BalmungSan">@BalmungSan</a>)</li></ul><h2><a aria-hidden="true" tabindex="-1" class="anchor" id="610-lts---28032018"></a><a aria-hidden="true" tabindex="-1" class="hash-link" href="#610-lts---28032018" title="Direct link to heading">#</a><a href="https://github.com/mwz/sonar-scala/releases/tag/v6.1.0">6.1.0 LTS</a> - 28.03.2018</h2><ul><li>The Scoverage sensor was rewritten from scratch; introduced a new branch
+coverage metric. (<a href="https://github.com/mwz/sonar-scala/issues/34">#34</a> -
+<a href="https://github.com/BalmungSan">@BalmungSan</a>)</li><li>Addressed coverage measure warnings reported by sonar-scanner during analysis.
+(<a href="https://github.com/mwz/sonar-scala/issues/18">#18</a> -
+<a href="https://github.com/BalmungSan">@BalmungSan</a>)</li><li>Added a new property <code>sonar.scala.version</code> to specify Scala version.
+(<a href="https://github.com/mwz/sonar-scala/issues/2">#2</a> -
+<a href="https://github.com/ElfoLiNk">@ElfoLiNk</a>)</li></ul><h2><a aria-hidden="true" tabindex="-1" class="anchor" id="600-lts---10022018"></a><a aria-hidden="true" tabindex="-1" class="hash-link" href="#600-lts---10022018" title="Direct link to heading">#</a><a href="https://github.com/mwz/sonar-scala/releases/tag/v6.0.0">6.0.0 LTS</a> - 10.02.2018</h2><ul><li>Support for SonarQube 6.7.1 LTS.
+(<a href="https://github.com/mwz/sonar-scala/issues/5">#5</a> -
+<a href="https://github.com/mwz">@mwz</a>)</li></ul></div></article><div class="margin-vert--xl"><div class="row"><div class="col"><a href="https://github.com/sonar-scala/website/edit/master/docs/changelog.md" target="_blank" rel="noreferrer noopener"><svg fill="currentColor" height="1.2em" width="1.2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 40 40" style="margin-right:0.3em;vertical-align:sub"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div></div></div><div class="margin-vert--lg"><nav class="pagination-nav"><div class="pagination-nav__item"></div><div class="pagination-nav__item pagination-nav__item--next"></div></nav></div></div></div><div class="col col--3"><div class="tableOfContents_TbNY"><ul class="contents contents__left-border"><li><a href="#780-lts---23122019" class="contents__link">7.8.0 LTS - 23.12.2019</a></li><li><a href="#770-lts---11102019" class="contents__link">7.7.0 LTS - 11.10.2019</a></li><li><a href="#760---30062019" class="contents__link">7.6.0 - 30.06.2019</a></li><li><a href="#750---25032019" class="contents__link">7.5.0 - 25.03.2019</a></li><li><a href="#740---11032019" class="contents__link">7.4.0 - 11.03.2019</a></li><li><a href="#680-lts---03032019" class="contents__link">6.8.0 LTS - 03.03.2019</a></li><li><a href="#731---27012019" class="contents__link">7.3.1 - 27.01.2019</a></li><li><a href="#730---30122018" class="contents__link">7.3.0 - 30.12.2018</a></li><li><a href="#670-lts---09122018" class="contents__link">6.7.0 LTS - 09.12.2018</a></li><li><a href="#720---03122018" class="contents__link">7.2.0 - 03.12.2018</a></li><li><a href="#710---19112018" class="contents__link">7.1.0 - 19.11.2018</a></li><li><a href="#700---08102018" class="contents__link">7.0.0 - 08.10.2018</a></li><li><a href="#660-lts---30092018" class="contents__link">6.6.0 LTS - 30.09.2018</a></li><li><a href="#651-lts---11082018" class="contents__link">6.5.1 LTS - 11.08.2018</a></li><li><a href="#650-lts---09072018" class="contents__link">6.5.0 LTS - 09.07.2018</a></li><li><a href="#640-lts---23052018" class="contents__link">6.4.0 LTS - 23.05.2018</a></li><li><a href="#630-lts---12052018" class="contents__link">6.3.0 LTS - 12.05.2018</a></li><li><a href="#620-lts---28042018" class="contents__link">6.2.0 LTS - 28.04.2018</a></li><li><a href="#610-lts---28032018" class="contents__link">6.1.0 LTS - 28.03.2018</a></li><li><a href="#600-lts---10022018" class="contents__link">6.0.0 LTS - 10.02.2018</a></li></ul></div></div></div></div></div></main></div></div><footer class="footer"><div class="container"><div class="row footer__links"><div class="col footer__col"><h4 class="footer__title">Docs</h4><ul class="footer__items"><li class="footer__item"><a class="footer__link-item" to="https://github.com/mwz/sonar-scala#--sonar-scala" href="https://github.com/mwz/sonar-scala#--sonar-scala">Get started</a></li><li class="footer__item"><a aria-current="page" class="footer__link-item active" href="/docs/changelog">Changelog</a></li></ul></div><div class="col footer__col"><h4 class="footer__title">Get help</h4><ul class="footer__items"><li class="footer__item"><a class="footer__link-item" target="_blank" rel="noopener noreferrer" href="https://github.com/mwz/sonar-scala/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc">Github</a></li><li class="footer__item"><a class="footer__link-item" target="_blank" rel="noopener noreferrer" href="https://gitter.im/sonar-scala/sonar-scala">Chat on Gitter</a></li></ul></div><div class="col footer__col"><h4 class="footer__title">Related projects</h4><ul class="footer__items"><li class="footer__item"><a class="footer__link-item" target="_blank" rel="noopener noreferrer" href="https://github.com/mwz/sbt-sonar">sbt-sonar</a></li><li class="footer__item"><a class="footer__link-item" target="_blank" rel="noopener noreferrer" href="https://github.com/mwz/sonar-scala-docker">sonar-scala-docker</a></li></ul></div></div><div class="text--center">Copyright © 2019 sonar-scala. Built with Docusaurus.</div></div></footer>
+</div>
+
+<script src="/styles.1d9a9678.js"></script>
+
+<script src="/runtime~main.e49a1c59.js"></script>
+
+<script src="/main.0ddd8b01.js"></script>
+
+<script src="/common.145452ee.js"></script>
+
+<script src="/1be78505.395443b8.js"></script>
+
+<script src="/20ac7829.6c9de0f9.js"></script>
+
+<script src="/17896441.6baf6dc6.js"></script>
+
+<script src="/9beb87c2.81338e52.js"></script>
+
+
+</body>
+</html>
