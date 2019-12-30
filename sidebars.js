@@ -7,6 +7,6 @@
 
 module.exports = {
   docs: {
-    Docs: []
+    Changelog: ["changelog"]
   }
 };

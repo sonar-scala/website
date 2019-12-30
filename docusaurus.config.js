@@ -39,8 +39,8 @@ module.exports = {
               to: "https://github.com/mwz/sonar-scala#--sonar-scala"
             },
             {
-              label: "Releases",
-              to: "https://github.com/mwz/sonar-scala/releases"
+              label: "Changelog",
+              to: "docs/changelog"
             }
           ]
         },
