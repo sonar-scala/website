@@ -165,7 +165,7 @@ function Home() {
                 "button button--lg button--secondary",
                 styles.getStarted
               )}
-              to={"docs/about"}
+              to="https://github.com/mwz/sonar-scala#--sonar-scala"
             >
               Get Started
             </Link>
