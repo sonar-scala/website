@@ -124,6 +124,8 @@ function Feature({ imageUrls, codeSnippet, title, description }) {
   const imgs = imageUrls ? imageUrls : [];
   return (
     <div className={classnames("col", styles.col)}>
+      <h3>{title}</h3>
+      <p>{description}</p>
       {!imgs.isEmpty && !codeSnippet && (
         <div className="text--center">
           <div className="row padding-bottom--md">
@@ -140,8 +142,6 @@ function Feature({ imageUrls, codeSnippet, title, description }) {
           <div className="col">{codeSnippet}</div>
         </div>
       )}
-      <h3>{title}</h3>
-      <p>{description}</p>
     </div>
   );
 }
@@ -175,7 +175,7 @@ function Home() {
       <main>
         {features && features.length && (
           <section className={styles.features}>
-            <div className="container">
+            <div className="container padding-top--lg">
               {features.map((items, i) => (
                 <div
                   className={classnames("row", "padding-vert--lg", styles.row)}
