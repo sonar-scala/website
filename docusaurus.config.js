@@ -17,6 +17,11 @@ module.exports = {
         src: "img/logo.svg"
       },
       links: [
+        {
+          to: "docs/about/what-is-sonar-scala",
+          label: "Docs",
+          position: "right"
+        },
         { to: "docs/changelog", label: "Changelog", position: "right" },
         {
           href: "https://github.com/mwz/sonar-scala",

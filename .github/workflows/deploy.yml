@@ -18,6 +18,7 @@ jobs:
         with:
           node-version: 10.x
       - run: npm install
+      - run: inject-vars.sh
       - run: npm run deploy
         env:
           GIT_USER: sonar-scala-bot
