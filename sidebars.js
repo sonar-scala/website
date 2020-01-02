@@ -6,20 +6,31 @@
  */
 
 module.exports = {
-  docs: {
-    About: [
-      "about/what-is-sonar-scala",
-      "about/supported-metrics",
-      "about/quality-rules-and-profiles",
-      "about/compatibility-with-sonarqube"
-    ],
-    Setup: [
-      "setup/getting-started",
-      "setup/sonar-scanner-properties",
-      "setup/sbt-sonar",
-      "setup/pr-decoration"
-      // "setup/troubleshooting"
-    ],
-    Changelog: ["changelog"]
-  }
+  docs: [
+    {
+      type: "category",
+      label: "About",
+      items: [
+        "about/what-is-sonar-scala",
+        "about/supported-metrics",
+        "about/quality-rules-and-profiles",
+        "about/compatibility-with-sonarqube"
+      ]
+    },
+    {
+      type: "category",
+      label: "Setup",
+      items: [
+        "setup/getting-started",
+        "setup/sonar-scanner-properties",
+        "setup/sbt-sonar",
+        "setup/pr-decoration"
+        // "setup/troubleshooting"
+      ]
+    },
+    {
+      type: "doc",
+      id: "changelog"
+    }
+  ]
 };
