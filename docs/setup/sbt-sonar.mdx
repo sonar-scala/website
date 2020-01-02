@@ -2,7 +2,8 @@
 title: Sbt-sonar
 ---
 
-import { vars, Prism, Highlight } from "../../scalaHighlight";
+import Prism from "../../scalaHighlight";
+import vars from "../../vars";
 
 [Sbt-sonar](https://github.com/mwz/sbt-sonar) is an sbt plugin, which provides
 an easy way to execute SonarQube analysis for Scala projects. It uses an
@@ -11,9 +12,9 @@ under the hood, which allows you to run SonarQube scan without the need to have
 the sonar-scanner executable installed in your environment.
 
 <div className="alert alert--info" role="alert">
-  This plugin is particularly useful when used together with sbt-release for an
-  automated release process in your project, but it can be also used without
-  sbt-release.
+  This plugin is particularly useful for CI when used together with e.g.
+  sbt-release for an automated release process in your project, but it can be
+  also used on its own.
 </div>
 
 ## Requirements
@@ -28,6 +29,7 @@ the sonar-scanner executable installed in your environment.
   [Scoverage](https://github.com/scoverage/scalac-scoverage-plugin) (code
   coverage metrics), [Scalastyle](http://www.scalastyle.org) and
   [Scapegoat](https://github.com/sksamuel/scapegoat) (static code analysis).
+  Also read the [Getting Started](getting-started.md) guide.  
   Alternatively, see the instructions for manual installation
   [here](https://docs.sonarqube.org/latest/setup/get-started-2-minutes).
 
@@ -36,19 +38,19 @@ the sonar-scanner executable installed in your environment.
 To install this plugin in your project, add the following to your
 `./project/plugins.sbt` file:
 
-<Highlight Prism={Prism} className="language-scala">
+<code className="language-scala">
   {`addSbtPlugin("com.github.mwz" % "sbt-sonar" % "${vars.sbtSonarVersion}")`}
-</Highlight>
+</code>
 
 ## Usage
 
 You can define your project properties either in the external config file
 `sonar-project.properties`, which should be located in the root directory of
 your project as explained in
-[SonarQube Scanner guide](http://docs.sonarqube.org/display/SCAN/Analyzing+with+SonarQube+Scanner)
+[SonarQube Scanner guide](https://docs.sonarqube.org/latest/analysis/scan/sonarscanner)
 or directly in sbt. By default, the plugin expects the properties to be defined
-in the `sonarProperties` setting key in sbt, which comes with the following set
-of **predefined** properties:
+in the `sonarProperties` settings key in sbt, which already comes with the
+following set of **predefined** properties:
 
 - **sonar.projectName** - your project name defined in the `name` sbt setting
   key
@@ -68,20 +70,21 @@ of **predefined** properties:
 - **sonar.scala.scapegoat.reportPath** - relative path to the scapegoat report
   (e.g. `target/scala-2.12/scapegoat-report/scapegoat.xml`)
 
-If you wish to add more properties to the existing config e.g. to configure your
-Sonar plugins or set up a multi-module project, use the `++=` operator, e.g.:
+Usually, the default settings are sufficient for majority of the projects and
+you rarely need to change any of them, unless your project is set-up in an
+unconventional way or contains multiple modules.
+
+To add more properties to the existing config or to overwrite any of the
+existing ones e.g. to set up a multi-module project, you can use the `++=`
+operator, e.g.:
 
 ```scala
 import sbtsonar.SonarPlugin.autoImport.sonarProperties
 
 sonarProperties ++= Map(
-  "sonar.host.url" -> "https://your-sonarqube-server.com",
-  "sonar.sources" -> "src/main/scala",
-  "sonar.tests" -> "src/test/scala",
   "sonar.modules" -> "module1,module2",
   "module1.sonar.projectName" -> "Module 1",
   "module2.sonar.projectName" -> "Module 2"
-  ...
 )
 ```
 
@@ -100,14 +103,14 @@ sonarProperties := Map(
   "sonar.sourceEncoding" -> "UTF-8",
   "sonar.scala.scoverage.reportPath" -> "target/scala-2.12/scoverage-report/scoverage.xml",
   "sonar.scala.scapegoat.reportPath" -> "target/scala-2.12/scapegoat-report/scapegoat.xml"
-  ...
 )
 ```
 
 ### External config
 
 To use the external `sonar-project.properties` file instead, you can set the
-`sonarUseExternalConfig` to `true`, e.g.:
+`sonarUseExternalConfig` to `true` and you can skip entirely setting the
+`sonarProperties` value, e.g.:
 
 ```scala
 import sbtsonar.SonarPlugin.autoImport.sonarUseExternalConfig
@@ -131,10 +134,13 @@ via system properties (java options) when you execute `sonarScan` command, e.g.:
 sbt -Dsonar.projectName=MyProjectName sonarScan
 ```
 
-Please remember to set the `sonar.host.url` property before you execute the
-analysis. You can do that either by adding it to the `sonarProperties` settings
-in sbt (as shown in the examples above), or you can set it via a system
-property, e.g.:
+<div className="alert alert--warning" role="alert">
+  Remember to set the <inlineCode>sonar.host.url</inlineCode> environment
+  property before you execute the analysis.
+</div>
+
+You can do that either by adding it to the `sonarProperties` settings in sbt (as
+shown in the examples above), or you can set it via a system property, e.g.:
 
 ```bash
 sbt -Dsonar.host.url=https://your-sonarqube-server.com sonarScan
@@ -142,7 +148,7 @@ sbt -Dsonar.host.url=https://your-sonarqube-server.com sonarScan
 
 By default this property is set to `http://localhost:9000`.
 
-sbt-sonar can also read the URL of your SonarQube instance from the
+Sbt-sonar can also read the URL of your SonarQube instance from the
 `SONAR_HOST_URL` environment variable instead of system properties. If both
 values are present, the `sonar.host.url` system property takes precedence over
 the environment variable.
@@ -153,31 +159,29 @@ This plugin can be also easily used with
 [sbt-release](https://github.com/sbt/sbt-release) by wrapping the `sonarScan`
 task in a `releaseStepTask` in the following way:
 
-```scala
+```scala {9}
 import sbtsonar.SonarPlugin.autoImport.sonarScan
 
 releaseProcess := Seq[ReleaseStep](
-  ...
   releaseStepCommand("coverageOn"),
   releaseStepTask(test),
   releaseStepCommand("coverageOff"),
   releaseStepTask(coverageReport),
   releaseStepTask(scapegoat),
   releaseStepTask(sonarScan),
-  ...
 )
 ```
 
 ### Fallback mode
 
 It is possible to make the plugin call through to a standalone
-[sonar-scanner](http://docs.sonarqube.org/display/SCAN/Analyzing+with+SonarQube+Scanner)
+[sonar-scanner](https://docs.sonarqube.org/latest/analysis/scan/sonarscanner)
 executable, if that's what you prefer, for any reasons. This was the default
 behaviour before version 2.0 and in case you experience any issues with 2.x, you
 can fall back to using the standalone mode.
 
 In order to do that, you need to have the
-[sonar-scanner](http://docs.sonarqube.org/display/SCAN/Analyzing+with+SonarQube+Scanner)
+[sonar-scanner](https://docs.sonarqube.org/latest/analysis/scan/sonarscanner)
 installed on your CI server or locally, if you intend to run the analysis on
 your machine. You also need to make sure you have defined the
 `SONAR_SCANNER_HOME` environmental variable, or `sonarScanner.home` system
@@ -197,9 +201,11 @@ sonarUseSonarScannerCli := true
 
 ## Examples
 
-Please see
-[src/sbt-test](https://github.com/mwz/sbt-sonar/tree/master/src/sbt-test/sbt-sonar)
-directory for some example projects.
+Please see the
+[tests](https://github.com/mwz/sbt-sonar/tree/master/src/sbt-test/sbt-sonar)
+directory for some example projects.  
+You can find there examples of projects using sbt 0.13 and 1.0, Scala 2.11,
+2.12, a multi-module project and a project using an external properties file.
 
 ## Changelog
 

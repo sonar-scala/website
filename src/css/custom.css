@@ -11,7 +11,7 @@
 }
 
 .docusaurus-highlight-code-line {
-  background-color: rgb(72, 77, 91);
+  background-color: #ffeb94;
   display: block;
   margin: 0 calc(-1 * var(--ifm-pre-padding));
   padding: 0 var(--ifm-pre-padding);
@@ -19,4 +19,8 @@
 
 .footer {
   text-align: center;
+}
+
+div.alert + p {
+  margin-top: var(--ifm-leading);
 }
