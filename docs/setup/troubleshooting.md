@@ -2,4 +2,6 @@
 title: Troubleshooting
 ---
 
-<!-- TODO -->
+- Verbose mode
+- Coexistence of sonar-scala and SonarScala
+-

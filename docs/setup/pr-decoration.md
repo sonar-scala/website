@@ -9,11 +9,13 @@ directly on the pull request.
 This functionality is similar to what was provided by the
 [GitHub Plugin](https://docs.sonarqube.org/display/PLUG/GitHub+Plugin), which
 was deprecated in SonarQube 7.2 and replaced by similar functionality in the
-paid Developer Edition. :rage: SonarCloud also offers PR analysis, but it
-requires a paid subscription for private projects.
+paid Developer Edition. SonarCloud also offers PR analysis, but it requires a
+paid subscription for private projects.
 
-**Sonar-scala brings Github PR decoration functionality for free to the
-Community Edition of SonarQube!**
+<div className="alert alert--info" role="alert">
+  <b>Sonar-scala brings Github PR decoration functionality for free to the
+  Community Edition of SonarQube!</b>
+</div>
 
 See some examples below:
 

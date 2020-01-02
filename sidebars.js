@@ -17,8 +17,8 @@ module.exports = {
       "setup/getting-started",
       "setup/sonar-scanner-properties",
       "setup/sbt-sonar",
-      "setup/pr-decoration",
-      "setup/troubleshooting"
+      "setup/pr-decoration"
+      // "setup/troubleshooting"
     ],
     Changelog: ["changelog"]
   }
