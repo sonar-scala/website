@@ -45,8 +45,12 @@ module.exports = {
           title: "Docs",
           items: [
             {
+              label: "About",
+              to: "docs/about/what-is-sonar-scala"
+            },
+            {
               label: "Get started",
-              to: "https://github.com/mwz/sonar-scala#--sonar-scala"
+              to: "docs/setup/getting-started"
             },
             {
               label: "Changelog",
@@ -59,8 +63,7 @@ module.exports = {
           items: [
             {
               label: "Github",
-              href:
-                "https://github.com/mwz/sonar-scala/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc"
+              href: "https://github.com/mwz/sonar-scala/issues"
             },
             {
               label: "Chat on Gitter",

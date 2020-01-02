@@ -21,6 +21,11 @@
   text-align: center;
 }
 
-div.alert + p {
+/* 
+Top margin for a new paragraph
+after an alert and a code block.
+*/
+div.alert + p,
+div[class^="codeBlockWrapper"] + p {
   margin-top: var(--ifm-leading);
 }

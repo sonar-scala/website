@@ -1,0 +1,84 @@
+---
+title: Getting Started
+---
+
+import Prism from "../../scalaHighlight";
+import vars from "../../vars";
+
+For an out-of-the-box setup, you can use the following docker-compose recipe or
+a docker image with SonarQube which contains bundled sonar-scala plugin. Please
+see [mwz/sonar-scala-docker](https://github.com/mwz/sonar-scala-docker) for more
+details or simply follow this guide.
+
+Alternatively, if you already have a SonarQube instance or you don't want to use
+Docker, you can download the latest
+[release](https://github.com/mwz/sonar-scala/releases) jar into your SonarQube
+plugins folder `/opt/sonarqube/extensions/plugins` and restart SonarQube either
+manually or using the update center.
+
+For automating the analysis of your Scala projects, check out
+[mwz/sbt-sonar](https://github.com/mwz/sbt-sonar) sbt plugin and the
+documentation [here](sbt-sonar.mdx). Alternatively, see the
+[examples](https://github.com/mwz/sonar-scala/tree/master/examples) directory in
+sonar-scala repository, which includes example projects for SBT _(`1.x`)_,
+Gradle _(`5.x`)_ and Maven _(`3.x`)_ along with basic instructions on how to
+execute SonarQube analysis for each of those projects without sbt-sonar.
+
+<div className="alert alert--warning" role="alert">
+  Running analysis from a Windows machine is currently not supported - please
+  use Linux or other Unix-like operating system.
+</div>
+
+## Quick start
+
+Let's start off by adding the following sbt plugins to your Scala project, in
+the `./project/plugins.sbt` file:
+
+<code className="language-scala">
+  {`
+addSbtPlugin("org.scoverage" % "sbt-scoverage" % "1.6.1")
+addSbtPlugin("com.github.mwz" % "sbt-sonar" % "${vars.sbtSonarVersion}")
+  `}
+</code>
+
+We've added the [sbt-scoverage](https://github.com/scoverage/sbt-scoverage)
+plugin so that we can generate a coverage report and the
+[sbt-sonar](sbt-sonar.mdx) plugin to easily trigger an analysis via an sbt task.
+
+Let's start a local SonarQube server for demonstration purposes.
+
+```
+docker run -p 80:9000 \
+  mwizner/sonarqube-scala-plugins:latest-full
+```
+
+Once SonarQube starts up, you should see the message saying that
+`SonarQube is up` and the UI should be available through http://localhost. The
+login credentials are `admin:admin` in case you want to browse around.
+
+<div className="alert alert--warning" role="alert">
+  Since we haven't specified an external database for SonarQube to use, it runs
+  in a demo mode using an embedded database, which will be lost once the docker
+  container is stopped. Please use an external database in a production
+  environment.
+</div>
+
+Finally, let's execute a SonarQube scan via sbt.
+
+```bash
+sbt -Dsonar.host.url=http://localhost \
+  clean coverage test coverageReport sonarScan
+```
+
+Once the scan completes successfully, you can navigate to
+http://localhost/projects to see the results.
+
+<div className="alert alert--info" role="alert">
+  This basic setup should report to SonarQube all of the useful Size, Coverage
+  and Test metrics in addition to raising any Scalastyle issues that were
+  identified in your project.
+</div>
+
+## Scapegoat
+
+## Multi-module projects

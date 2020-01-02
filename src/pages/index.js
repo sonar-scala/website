@@ -76,10 +76,10 @@ const features = [
       codeSnippet: (
         <Highlight>
           {`
-$ docker run -p 80:9000 -d \\
-  mwizner/sonarqube-scala-plugins:4.1.0-full
+docker run -p 80:9000 -d \\
+  mwizner/sonarqube-scala-plugins:latest-full
 
-$ sbt -Dsonar.host.url=http://localhost \\
+sbt -Dsonar.host.url=http://localhost \\
   clean coverage test coverageReport scapegoat sonarScan
             `}
         </Highlight>
@@ -129,8 +129,8 @@ function Feature({ imageUrls, codeSnippet, title, description }) {
       {!imgs.isEmpty && !codeSnippet && (
         <div className="text--center">
           <div className="row padding-bottom--md">
-            {imgs.map(img => (
-              <div className="col">
+            {imgs.map((img, i) => (
+              <div className="col" key={i}>
                 <img className={styles.featureImage} src={img} alt={title} />
               </div>
             ))}
@@ -165,7 +165,7 @@ function Home() {
                 "button button--lg button--secondary",
                 styles.getStarted
               )}
-              to="https://github.com/mwz/sonar-scala#--sonar-scala"
+              to="docs/setup/getting-started"
             >
               Get Started
             </Link>
@@ -179,9 +179,10 @@ function Home() {
               {features.map((items, i) => (
                 <div
                   className={classnames("row", "padding-vert--lg", styles.row)}
+                  key={i}
                 >
                   {items.map((item, j) => (
-                    <Feature key={i * 100 + j} {...item} />
+                    <Feature key={j} {...item} />
                   ))}
                 </div>
               ))}
