@@ -13,7 +13,7 @@ paid Developer Edition. SonarCloud also offers PR decoration, but it requires a
 paid subscription for private projects.
 
 <div className="alert alert--info" role="alert">
-  Sonar-scala brings Github PR decoration functionality for free to the
+  sonar-scala brings Github PR decoration functionality for free to the
   Community Edition of SonarQube!
 </div>
 
@@ -23,7 +23,7 @@ See some examples below:
 
 ![](/img/pr-decoration-example2.png)
 
-Sonar-scala also reports a status check at the end of the analysis - passed if
+sonar-scala also reports a status check at the end of the analysis - passed if
 no critical or blocker issues are found, or failed otherwise.
 
 ![](/img/pr-decoration-status-check.png)
@@ -67,7 +67,7 @@ Once you run sonar-scala in decoration mode, instead of sending the results to
 SonarQube it will post the relevant comments to Github, which results in
 creating an empty project in SonarQube. This is necessary to make this feature
 work since the Community Edition of SonarQube doesn't have the support for
-branch analysis. Sonar-scala works around that limitation by having an empty
+branch analysis. sonar-scala works around that limitation by having an empty
 project so that it can still be executed, analyse your code and post any
 comments back to Github.
 

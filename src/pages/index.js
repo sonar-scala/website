@@ -14,7 +14,7 @@ const features = [
       imageUrls: ["img/scalastyle.png"],
       description: (
         <>
-          Sonar-scala provides 65 built-in{" "}
+          sonar-scala provides 65 built-in{" "}
           <a href="http://www.scalastyle.org">Scalastyle</a> inspections, which
           are automatically checked on SonarQube analysis - no extra setup
           required.
@@ -26,7 +26,7 @@ const features = [
       imageUrls: ["img/scapegoat.png"],
       description: (
         <>
-          Sonar-scala provides a seamless integration with{" "}
+          sonar-scala provides a seamless integration with{" "}
           <a href="https://github.com/sksamuel/scapegoat">Scapegoat</a>.
           Generate a Scapegoat report and sonar-scala will process it and create
           issues in SonarQube based on your quality profile. There are 118
@@ -41,7 +41,7 @@ const features = [
       imageUrls: ["img/quality-profiles.png"],
       description: (
         <>
-          Sonar-scala provides two rules repositories and four built-in quality
+          sonar-scala provides two rules repositories and four built-in quality
           profiles - one for <code>Scalastyle</code>, one for{" "}
           <code>Scapegoat</code> as well as a combination of those two:{" "}
           <code>Scalastyle+Scapegoat</code> and the{" "}
@@ -57,7 +57,7 @@ const features = [
       imageUrls: ["img/scoverage.png"],
       description: (
         <>
-          Sonar-scala integrates with{" "}
+          sonar-scala integrates with{" "}
           <a href="http://scoverage.org">Scoverage</a> and reports coverage
           results back to SonarQube. It also reads JUnit-style reports produced
           by testing frameworks like{" "}
@@ -109,7 +109,7 @@ const features = [
       ],
       description: (
         <>
-          Sonar-scala can be run in a "decoration mode", which can analyse your
+          sonar-scala can be run in a "decoration mode", which can analyse your
           pull requests on GitHub and any new issues introduced in the code base
           will be posted as inline comments directly on the pull request.
         </>

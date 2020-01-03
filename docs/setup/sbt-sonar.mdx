@@ -1,11 +1,11 @@
 ---
-title: Sbt-sonar
+title: sbt-sonar
 ---
 
 import Prism from "../../scalaHighlight";
 import vars from "../../vars";
 
-[Sbt-sonar](https://github.com/mwz/sbt-sonar) is an sbt plugin, which provides
+[sbt-sonar](https://github.com/mwz/sbt-sonar) is an sbt plugin, which provides
 an easy way to execute SonarQube analysis for Scala projects. It uses an
 embedded [sonar-scanner API](https://github.com/SonarSource/sonar-scanner-api)
 under the hood, which allows you to run SonarQube scan without the need to have
@@ -148,7 +148,7 @@ sbt -Dsonar.host.url=https://your-sonarqube-server.com sonarScan
 
 By default this property is set to `http://localhost:9000`.
 
-Sbt-sonar can also read the URL of your SonarQube instance from the
+sbt-sonar can also read the URL of your SonarQube instance from the
 `SONAR_HOST_URL` environment variable instead of system properties. If both
 values are present, the `sonar.host.url` system property takes precedence over
 the environment variable.
