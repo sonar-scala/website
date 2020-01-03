@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="generator" content="Docusaurus">
+
+
+<title data-react-helmet="true">Pull Request Decoration</title>
+
+<meta data-react-helmet="true" http-equiv="x-ua-compatible" content="ie=edge"><meta data-react-helmet="true" property="og:title" content="sonar-scala · A free and open-source SonarQube plugin for static code analysis of Scala projects"><meta data-react-helmet="true" property="og:image" content="https://sonar-scala.com/img/logo.png"><meta data-react-helmet="true" property="twitter:image" content="https://sonar-scala.com/img/logo.png"><meta data-react-helmet="true" name="twitter:image:alt" content="Image for sonar-scala · A free and open-source SonarQube plugin for static code analysis of Scala projects"><meta data-react-helmet="true" name="twitter:card" content="summary"><meta data-react-helmet="true" name="description" content="Starting from version `7.8.0`, sonar-scala can be run in a decoration mode,"><meta data-react-helmet="true" property="og:description" content="Starting from version `7.8.0`, sonar-scala can be run in a decoration mode,"><meta data-react-helmet="true" property="og:url" content="https://sonar-scala.com/docs/setup/pr-decoration">
+
+<link data-react-helmet="true" rel="shortcut icon" href="/img/favicon.ico">
+
+
+<link rel="stylesheet" href="/styles.c1400c7d.css">
+
+</head>
+<body>
+
+<div id="__docusaurus">
+<nav class="navbar navbar--light navbar--fixed-top"><div class="navbar__inner"><div class="navbar__items"><div aria-label="Navigation bar toggle" class="navbar__toggle" role="button" tabindex="0"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" role="img" focusable="false"><title>Menu</title><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></div><a aria-current="page" class="navbar__brand active" href="/"><img class="navbar__logo" src="/img/logo.svg" alt="logo"><strong>sonar-scala</strong></a></div><div class="navbar__items navbar__items--right"><a class="navbar__item navbar__link" href="/docs/about/what-is-sonar-scala">Docs</a><a class="navbar__item navbar__link" href="/docs/changelog">Changelog</a><a class="navbar__item navbar__link" target="_blank" rel="noopener noreferrer" href="https://github.com/mwz/sonar-scala">GitHub</a><a class="navbar__item navbar__link" target="_blank" rel="noopener noreferrer" href="https://gitter.im/sonar-scala/sonar-scala">Chat</a></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div><div class="navbar-sidebar"><div class="navbar-sidebar__brand"><a aria-current="page" class="navbar__brand active" href="/"><img class="navbar__logo" src="/img/logo.svg" alt="logo"><strong>sonar-scala</strong></a></div><div class="navbar-sidebar__items"><div class="menu"><ul class="menu__list"><li class="menu__list-item"><a class="menu__link" href="/docs/about/what-is-sonar-scala">Docs</a></li><li class="menu__list-item"><a class="menu__link" href="/docs/changelog">Changelog</a></li><li class="menu__list-item"><a class="menu__link" target="_blank" rel="noopener noreferrer" href="https://github.com/mwz/sonar-scala">GitHub</a></li><li class="menu__list-item"><a class="menu__link" target="_blank" rel="noopener noreferrer" href="https://gitter.im/sonar-scala/sonar-scala">Chat</a></li></ul></div></div></div></nav><div class="main-wrapper"><div class="docPage_1kjD"><div class="docSidebarContainer_1cYp"><div class="sidebar_1kLs"><div class="menu menu--responsive"><button aria-label="Open Menu" class="button button--secondary button--sm menu__button" type="button"><svg class="sidebarMenuIcon_2vk4" xmlns="http://www.w3.org/2000/svg" height="24" width="24" viewBox="0 0 32 32" role="img" focusable="false"><title>Menu</title><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><ul class="menu__list"><li class="menu__list-item"><a class="menu__link" href="#!">About</a><ul class="menu__list"><li class="menu__list-item"><a class="menu__link" href="/docs/about/what-is-sonar-scala">What is sonar-scala?</a></li><li class="menu__list-item"><a class="menu__link" href="/docs/about/supported-metrics">Supported Metrics</a></li><li class="menu__list-item"><a class="menu__link" href="/docs/about/quality-rules-and-profiles">Quality Rules and Profiles</a></li><li class="menu__list-item"><a class="menu__link" href="/docs/about/compatibility-with-sonarqube">Compatibility with SonarQube</a></li></ul></li><li class="menu__list-item"><a class="menu__link" href="#!">Setup</a><ul class="menu__list"><li class="menu__list-item"><a class="menu__link" href="/docs/setup/getting-started">Getting Started</a></li><li class="menu__list-item"><a class="menu__link" href="/docs/setup/sonar-scanner-properties">Sonar-scanner Properties</a></li><li class="menu__list-item"><a class="menu__link" href="/docs/setup/sbt-sonar">Sbt-sonar</a></li><li class="menu__list-item"><a aria-current="page" class="menu__link menu__link--active" href="/docs/setup/pr-decoration">Pull Request Decoration</a></li></ul></li><li class="menu__list-item"><a class="menu__link" href="/docs/changelog">Changelog</a></li></ul></div></div></div><main class="docMainContainer_FFX1"><div class="padding-vert--lg"><div class="container"><div class="row"><div class="col"><div class="docItemContainer_2cwg"><article><header><h1 class="docTitle_1vWb">Pull Request Decoration</h1></header><div class="markdown"><p>Starting from version <code>7.8.0</code>, sonar-scala can be run in a decoration mode,
+which can analyse Github pull requests and make comments on any new issues
+directly on the pull request.</p><p>This functionality is similar to what was provided by the
+<a href="https://docs.sonarqube.org/display/PLUG/GitHub+Plugin">GitHub Plugin</a>, which
+was deprecated in SonarQube 7.2 and replaced by similar functionality in the
+paid Developer Edition. SonarCloud also offers PR decoration, but it requires a
+paid subscription for private projects.</p><div class="alert alert--info" role="alert">Sonar-scala brings Github PR decoration functionality for free to the Community Edition of SonarQube!</div><p>See some examples below:</p><p><img src="/img/pr-decoration-example1.png"></p><p><img src="/img/pr-decoration-example2.png"></p><p>Sonar-scala also reports a status check at the end of the analysis - passed if
+no critical or blocker issues are found, or failed otherwise.</p><p><img src="/img/pr-decoration-status-check.png"></p><h2><a aria-hidden="true" tabindex="-1" class="anchor" id="configuration"></a><a aria-hidden="true" tabindex="-1" class="hash-link" href="#configuration" title="Direct link to heading">#</a>Configuration</h2><ul><li>Create a new dedicated Github account (you can use your existing bot/CI
+account if you already have one).</li><li>Generate a new personal access token for your account. The token can be
+generated in the <a href="https://github.com/settings/tokens">developer settings</a> on
+Github. Select the <code>public_repo</code> scope for public repositories or <code>repo</code> for
+private repositories (or a mix of public and private repositories).</li><li>Make sure you give your user write permissions to the repositories you want to
+decorate your PRs for, otherwise sonar-scala will fail as it won&#x27;t be able to
+set a status of the PR check.</li></ul><h2><a aria-hidden="true" tabindex="-1" class="anchor" id="usage"></a><a aria-hidden="true" tabindex="-1" class="hash-link" href="#usage" title="Direct link to heading">#</a>Usage</h2><p>Before you execute PR decoration, you need to check out the latest commit of the
+branch which was used to open the pull request. Once you&#x27;ve done that, you can
+run sonar-scala in decoration mode by setting the following properties:</p><ul><li><strong>sonar.scala.pullrequest.provider</strong> - currently, only <code>github</code> is supported</li><li><strong>sonar.scala.pullrequest.number</strong> - number of the pull request; if you use
+CircleCI, you can use the <code>CIRCLE_PR_NUMBER</code> env variable, Travis has
+<code>TRAVIS_PULL_REQUEST</code></li><li><strong>sonar.scala.pullrequest.github.repository</strong> - name of the repository
+including organisation name in the following format <code>org/project</code>, e.g.
+<code>mwz/sonar-scala</code> or <code>scala/scala</code>, etc.</li><li><strong>sonar.scala.pullrequest.github.oauth</strong> - Github personal access token that
+you generated in the previous step</li></ul><p>Optional:</p><ul><li><strong>sonar.scala.pullrequest.dryrun</strong> - execute PR decoration in &quot;dry run&quot; mode
+(sonar-scala will not post the results to Github). This setting is useful for
+testing purposes in combination with <code>sonar.verbose=true</code>. You usually won&#x27;t
+need to use this setting, unless you run into any issues.</li></ul><p>Once you run sonar-scala in decoration mode, instead of sending the results to
+SonarQube it will post the relevant comments to Github, which results in
+creating an empty project in SonarQube. This is necessary to make this feature
+work since the Community Edition of SonarQube doesn&#x27;t have the support for
+branch analysis. Sonar-scala works around that limitation by having an empty
+project so that it can still be executed, analyse your code and post any
+comments back to Github.</p><p>You can create an empty project yourself, or you can let sonar-scala do this for
+you. If your SonarQube instance requires authentication to execute an analysis,
+you need to make sure that your user has the right permissions to create a new
+project and execute an analysis, or just the permission to execute analysis if
+you created a new project yourself. Once you created a new blank project, you
+can use it across all of your projects.</p><p><img src="/img/pr-decoration-sonarqube.png"></p><p>The following example shows how to run sonar-scala in decoration mode for pull
+request <a href="https://github.com/mwz/sonar-scala-pr-annotation-example/pull/1">1</a> in
+the
+<a href="https://github.com/mwz/sonar-scala-pr-annotation-example">mwz/sonar-scala-pr-annotation-example</a>
+repository on Github. Notice the project name and key are set to match the
+dedicated blank project in SonarQube, which isn&#x27;t the same project you would
+normally use to execute an analysis in a &quot;normal&quot; mode.</p><pre class="mdxCodeBlock_iHAB"><div class="codeBlockWrapper_2QGZ"><pre class="prism-code language-bash codeBlock_19pQ" style="color:#393A34;background-color:#f6f8fa"><div class="token-line" style="color:#393A34"><span class="token plain">sbt </span><span class="token punctuation" style="color:#393A34">\</span><span class="token plain"></span></div><div class="token-line" style="color:#393A34"><span class="token plain">  -Dsonar.host.url</span><span class="token operator" style="color:#393A34">=</span><span class="token plain">http://localhost </span><span class="token punctuation" style="color:#393A34">\</span><span class="token plain"></span></div><div class="token-line" style="color:#393A34"><span class="token plain">  -Dsonar.projectName</span><span class="token operator" style="color:#393A34">=</span><span class="token string" style="color:#e3116c">&#x27;PR Decoration&#x27;</span><span class="token plain"> </span><span class="token punctuation" style="color:#393A34">\</span><span class="token plain"></span></div><div class="token-line" style="color:#393A34"><span class="token plain">  -Dsonar.projectKey</span><span class="token operator" style="color:#393A34">=</span><span class="token plain">pr-decoration </span><span class="token punctuation" style="color:#393A34">\</span><span class="token plain"></span></div><div class="token-line" style="color:#393A34"><span class="token plain">  -Dsonar.scala.pullrequest.provider</span><span class="token operator" style="color:#393A34">=</span><span class="token plain">github </span><span class="token punctuation" style="color:#393A34">\</span><span class="token plain"></span></div><div class="token-line" style="color:#393A34"><span class="token plain">  -Dsonar.scala.pullrequest.number</span><span class="token operator" style="color:#393A34">=</span><span class="token number" style="color:#36acaa">1</span><span class="token plain"> </span><span class="token punctuation" style="color:#393A34">\</span><span class="token plain"></span></div><div class="token-line" style="color:#393A34"><span class="token plain">  -Dsonar.scala.pullrequest.github.repository</span><span class="token operator" style="color:#393A34">=</span><span class="token plain">mwz/sonar-scala-pr-annotation-example </span><span class="token punctuation" style="color:#393A34">\</span><span class="token plain"></span></div><div class="token-line" style="color:#393A34"><span class="token plain">  -Dsonar.scala.pullrequest.github.oauth</span><span class="token operator" style="color:#393A34">=</span><span class="token plain">REDACTED </span><span class="token punctuation" style="color:#393A34">\</span><span class="token plain"></span></div><div class="token-line" style="color:#393A34"><span class="token plain">  sonarScan</span></div></pre><button type="button" aria-label="Copy code to clipboard" class="copyButton_1BYj">Copy</button></div></pre><p>If you want to have this automated by your CI, which is ideally how it&#x27;s
+intended to be used, the pull request setting will be different for each pull
+request. Most of the modern CI tools allow you to use a built-in environment
+variable to get the current pull request number - as mentioned previously,
+CircleCI has <code>CIRCLE_PR_NUMBER</code> and Travis provides <code>TRAVIS_PULL_REQUEST</code>.</p><div class="alert alert--warning" role="alert">Please remember that if you use the Scapegoat integration, you still need to generate Scapegoat report before executing sonar-scala otherwise any Scapegoat issues in your project won&#x27;t be reported back to Github; the same applies to Scoverage.</div></div></article><div class="margin-vert--xl"><div class="row"><div class="col"><a href="https://github.com/sonar-scala/website/edit/master/docs/setup/pr-decoration.mdx" target="_blank" rel="noreferrer noopener"><svg fill="currentColor" height="1.2em" width="1.2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 40 40" style="margin-right:0.3em;vertical-align:sub"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div></div></div><div class="margin-vert--lg"><nav class="pagination-nav"><div class="pagination-nav__item"><a class="pagination-nav__link" href="/docs/setup/sbt-sonar"><h5 class="pagination-nav__link--sublabel">Previous</h5><h4 class="pagination-nav__link--label">« Sbt-sonar</h4></a></div><div class="pagination-nav__item pagination-nav__item--next"><a class="pagination-nav__link" href="/docs/changelog"><h5 class="pagination-nav__link--sublabel">Next</h5><h4 class="pagination-nav__link--label">Changelog »</h4></a></div></nav></div></div></div><div class="col col--3"><div class="tableOfContents_TbNY"><ul class="contents contents__left-border"><li><a href="#configuration" class="contents__link">Configuration</a></li><li><a href="#usage" class="contents__link">Usage</a></li></ul></div></div></div></div></div></main></div></div><footer class="footer"><div class="container"><div class="row footer__links"><div class="col footer__col"><h4 class="footer__title">Docs</h4><ul class="footer__items"><li class="footer__item"><a class="footer__link-item" href="/docs/about/what-is-sonar-scala">About</a></li><li class="footer__item"><a class="footer__link-item" href="/docs/setup/getting-started">Get started</a></li><li class="footer__item"><a class="footer__link-item" href="/docs/changelog">Changelog</a></li></ul></div><div class="col footer__col"><h4 class="footer__title">Get help</h4><ul class="footer__items"><li class="footer__item"><a class="footer__link-item" target="_blank" rel="noopener noreferrer" href="https://github.com/mwz/sonar-scala/issues">GitHub</a></li><li class="footer__item"><a class="footer__link-item" target="_blank" rel="noopener noreferrer" href="https://gitter.im/sonar-scala/sonar-scala">Chat on Gitter</a></li></ul></div><div class="col footer__col"><h4 class="footer__title">Related projects</h4><ul class="footer__items"><li class="footer__item"><a class="footer__link-item" target="_blank" rel="noopener noreferrer" href="https://github.com/mwz/sbt-sonar">sbt-sonar</a></li><li class="footer__item"><a class="footer__link-item" target="_blank" rel="noopener noreferrer" href="https://github.com/mwz/sonar-scala-docker">sonar-scala-docker</a></li></ul></div></div><div class="text--center">Copyright © 2020 sonar-scala. Built with Docusaurus.</div></div></footer>
+</div>
+
+<script src="/styles.24383a65.js"></script>
+
+<script src="/runtime~main.284d585d.js"></script>
+
+<script src="/main.e9514481.js"></script>
+
+<script src="/1.dd0afd42.js"></script>
+
+<script src="/2.5e81d459.js"></script>
+
+<script src="/3.42d21075.js"></script>
+
+<script src="/1be78505.7fb604c7.js"></script>
+
+<script src="/20ac7829.68f2e040.js"></script>
+
+<script src="/17896441.580efdd0.js"></script>
+
+<script src="/3dc69288.1ada4b5f.js"></script>
+
+
+</body>
+</html>
