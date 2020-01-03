@@ -17,6 +17,11 @@ module.exports = {
         src: "img/logo.svg"
       },
       links: [
+        {
+          to: "docs/about/what-is-sonar-scala",
+          label: "Docs",
+          position: "right"
+        },
         { to: "docs/changelog", label: "Changelog", position: "right" },
         {
           href: "https://github.com/mwz/sonar-scala",
@@ -40,8 +45,12 @@ module.exports = {
           title: "Docs",
           items: [
             {
+              label: "About",
+              to: "docs/about/what-is-sonar-scala"
+            },
+            {
               label: "Get started",
-              to: "https://github.com/mwz/sonar-scala#--sonar-scala"
+              to: "docs/setup/getting-started"
             },
             {
               label: "Changelog",
@@ -53,9 +62,8 @@ module.exports = {
           title: "Get help",
           items: [
             {
-              label: "Github",
-              href:
-                "https://github.com/mwz/sonar-scala/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc"
+              label: "GitHub",
+              href: "https://github.com/mwz/sonar-scala/issues"
             },
             {
               label: "Chat on Gitter",

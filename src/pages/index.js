@@ -1,9 +1,9 @@
 import Link from "@docusaurus/Link";
-import useBaseUrl from "@docusaurus/useBaseUrl";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Highlight from "@theme/CodeBlock";
 import Layout from "@theme/Layout";
 import classnames from "classnames";
+import dedent from "dedent";
 import React from "react";
 import styles from "./styles.module.css";
 
@@ -15,11 +15,9 @@ const features = [
       description: (
         <>
           Sonar-scala provides 65 built-in{" "}
-          <a href="http://www.scalastyle.org/http://www.scalastyle.org">
-            Scalastyle
-          </a>{" "}
-          inspections, which are automatically checked on SonarQube analysis -
-          no extra setup required.
+          <a href="http://www.scalastyle.org">Scalastyle</a> inspections, which
+          are automatically checked on SonarQube analysis - no extra setup
+          required.
         </>
       )
     },
@@ -75,13 +73,13 @@ const features = [
       title: <>Minimal setup effort</>,
       codeSnippet: (
         <Highlight>
-          {`
-$ docker run -p 80:9000 -d \\
-  mwizner/sonarqube-scala-plugins:4.1.0-full
+          {dedent`
+            docker run -p 80:9000 -d \ 
+              mwizner/sonarqube-scala-plugins:latest-full
 
-$ sbt -Dsonar.host.url=http://localhost \\
-  clean coverage test coverageReport scapegoat sonarScan
-            `}
+            sbt -Dsonar.host.url=http://localhost \ 
+              clean coverage test coverageReport scapegoat sonarScan
+          `}
         </Highlight>
       ),
       description: (
@@ -129,8 +127,8 @@ function Feature({ imageUrls, codeSnippet, title, description }) {
       {!imgs.isEmpty && !codeSnippet && (
         <div className="text--center">
           <div className="row padding-bottom--md">
-            {imgs.map(img => (
-              <div className="col">
+            {imgs.map((img, i) => (
+              <div className="col" key={i}>
                 <img className={styles.featureImage} src={img} alt={title} />
               </div>
             ))}
@@ -165,7 +163,7 @@ function Home() {
                 "button button--lg button--secondary",
                 styles.getStarted
               )}
-              to="https://github.com/mwz/sonar-scala#--sonar-scala"
+              to="docs/setup/getting-started"
             >
               Get Started
             </Link>
@@ -179,9 +177,10 @@ function Home() {
               {features.map((items, i) => (
                 <div
                   className={classnames("row", "padding-vert--lg", styles.row)}
+                  key={i}
                 >
                   {items.map((item, j) => (
-                    <Feature key={i * 100 + j} {...item} />
+                    <Feature key={j} {...item} />
                   ))}
                 </div>
               ))}

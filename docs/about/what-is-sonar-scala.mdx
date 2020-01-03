@@ -1,0 +1,30 @@
+---
+title: What is sonar-scala?
+---
+
+Sonar-scala is a free, open-source and independent
+[SonarQube](https://www.sonarqube.org) plugin for static code analysis of Scala
+projects. It's driven and developed by the
+[community](https://github.com/mwz/sonar-scala/graphs/contributors).
+
+Sonar-scala is developed in Scala. It uses the
+[scalariform](https://github.com/scala-ide/scalariform) library to parse the
+source code and integrates with [Scoverage](http://scoverage.org) (code
+coverage), [Scalastyle](http://www.scalastyle.org) and
+[Scapegoat](https://github.com/sksamuel/scapegoat) (static code analysis). It
+also provides [pull request decoration](../setup/pr-decoration.mdx)
+functionality, which can review pull requests on Github and make comments on new
+issues directly in the pull request instead of reporting them to SonarQube.
+
+The major advantage of sonar-scala over the official
+[SonarScala](https://www.sonarsource.com/products/codeanalyzers/sonarscala.html)
+plugin is that it's built around tools such as Scalastyle and Scapegoat at it's
+core. It provides built-in rules and quality profiles for both of those tools,
+which allows you to easily explore those rules and get an aggregated view of
+existing issues across all of your projects. Scalastyle is built right into the
+plugin and doesn't require any additional set-up on your end. Additionally,
+sonar-scala supports pull request decoration on GitHub, for which SonarScala
+requires either a paid Developer Edition of SonarQube or SonarCloud
+subscription. Sonar-scala is free and will always remain free!
+
+<!-- ## How does it work? -->
