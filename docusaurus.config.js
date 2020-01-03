@@ -62,7 +62,7 @@ module.exports = {
           title: "Get help",
           items: [
             {
-              label: "Github",
+              label: "GitHub",
               href: "https://github.com/mwz/sonar-scala/issues"
             },
             {
