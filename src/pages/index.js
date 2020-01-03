@@ -1,9 +1,9 @@
 import Link from "@docusaurus/Link";
-import useBaseUrl from "@docusaurus/useBaseUrl";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Highlight from "@theme/CodeBlock";
 import Layout from "@theme/Layout";
 import classnames from "classnames";
+import dedent from "dedent";
 import React from "react";
 import styles from "./styles.module.css";
 
@@ -75,13 +75,13 @@ const features = [
       title: <>Minimal setup effort</>,
       codeSnippet: (
         <Highlight>
-          {`
-docker run -p 80:9000 -d \\
-  mwizner/sonarqube-scala-plugins:latest-full
+          {dedent`
+            docker run -p 80:9000 -d \ 
+              mwizner/sonarqube-scala-plugins:latest-full
 
-sbt -Dsonar.host.url=http://localhost \\
-  clean coverage test coverageReport scapegoat sonarScan
-            `}
+            sbt -Dsonar.host.url=http://localhost \ 
+              clean coverage test coverageReport scapegoat sonarScan
+          `}
         </Highlight>
       ),
       description: (

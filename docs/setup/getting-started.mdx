@@ -2,6 +2,7 @@
 title: Getting Started
 ---
 
+import dedent from "dedent";
 import Prism from "../../scalaHighlight";
 import vars from "../../vars";
 
@@ -30,9 +31,9 @@ Let's start off by adding the following sbt plugins to your Scala project, in
 the `./project/plugins.sbt` file:
 
 <code className="language-scala">
-  {`
-addSbtPlugin("org.scoverage" % "sbt-scoverage" % "1.6.1")
-addSbtPlugin("com.github.mwz" % "sbt-sonar" % "${vars.sbtSonarVersion}")
+  {dedent`
+    addSbtPlugin("org.scoverage" % "sbt-scoverage" % "1.6.1")
+    addSbtPlugin("com.github.mwz" % "sbt-sonar" % "${vars.sbtSonarVersion}")
   `}
 </code>
 
@@ -77,6 +78,6 @@ any Scalastyle issues that were identified in your project.
   use Linux or other Unix-like operating system.
 </div>
 
-## Scapegoat
+<!-- ## Scapegoat -->
 
-## Multi-module projects
+<!-- ## Multi-module projects -->
