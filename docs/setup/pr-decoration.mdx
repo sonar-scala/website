@@ -9,12 +9,12 @@ directly on the pull request.
 This functionality is similar to what was provided by the
 [GitHub Plugin](https://docs.sonarqube.org/display/PLUG/GitHub+Plugin), which
 was deprecated in SonarQube 7.2 and replaced by similar functionality in the
-paid Developer Edition. SonarCloud also offers PR analysis, but it requires a
+paid Developer Edition. SonarCloud also offers PR decoration, but it requires a
 paid subscription for private projects.
 
 <div className="alert alert--info" role="alert">
-  <b>Sonar-scala brings Github PR decoration functionality for free to the
-  Community Edition of SonarQube!</b>
+  Sonar-scala brings Github PR decoration functionality for free to the
+  Community Edition of SonarQube!
 </div>
 
 See some examples below:
@@ -30,8 +30,8 @@ no critical or blocker issues are found, or failed otherwise.
 
 ## Configuration
 
-- Create a new dedicated Github account, or you can use your existing bot/CI
-  account if you already have one.
+- Create a new dedicated Github account (you can use your existing bot/CI
+  account if you already have one).
 - Generate a new personal access token for your account. The token can be
   generated in the [developer settings](https://github.com/settings/tokens) on
   Github. Select the `public_repo` scope for public repositories or `repo` for
@@ -42,9 +42,9 @@ no critical or blocker issues are found, or failed otherwise.
 
 ## Usage
 
-Before you execute PR decoration, you need to check out to the latest commit of
-the branch which was used to open the pull request. Once you've done that, you
-can run sonar-scala in decoration mode by setting the following properties:
+Before you execute PR decoration, you need to check out the latest commit of the
+branch which was used to open the pull request. Once you've done that, you can
+run sonar-scala in decoration mode by setting the following properties:
 
 - **sonar.scala.pullrequest.provider** - currently, only `github` is supported
 - **sonar.scala.pullrequest.number** - number of the pull request; if you use
@@ -53,10 +53,8 @@ can run sonar-scala in decoration mode by setting the following properties:
 - **sonar.scala.pullrequest.github.repository** - name of the repository
   including organisation name in the following format `org/project`, e.g.
   `mwz/sonar-scala` or `scala/scala`, etc.
-- **sonar.scala.pullrequest.github.oauth** - Github personal access token; can
-  be generated in the [developer settings](https://github.com/settings/tokens)
-  on Github; select the `public_repo` scope for public repositories or `repo`
-  for private repositories (or a mix of public and private repositories)
+- **sonar.scala.pullrequest.github.oauth** - Github personal access token that
+  you generated in the previous step
 
 Optional:
 
@@ -105,10 +103,12 @@ sbt \
 If you want to have this automated by your CI, which is ideally how it's
 intended to be used, the pull request setting will be different for each pull
 request. Most of the modern CI tools allow you to use a built-in environment
-variable to get the current pull request number, e.g. CircleCI has
-`CIRCLE_PR_NUMBER` and Travis provides `TRAVIS_PULL_REQUEST`.
+variable to get the current pull request number - as mentioned previously,
+CircleCI has `CIRCLE_PR_NUMBER` and Travis provides `TRAVIS_PULL_REQUEST`.
 
-Please remember that if you use the Scapegoat integration, you still need to
-generate scapegoat report before executing sonar-scala by running
-`sbt scapegoat` - otherwise any Scapegoat issues in your project won't be
-reported back to Github.
+<div className="alert alert--warning" role="alert">
+  Please remember that if you use the Scapegoat integration, you still need to
+  generate Scapegoat report before executing sonar-scala otherwise any Scapegoat
+  issues in your project won't be reported back to Github; the same applies to
+  Scoverage.
+</div>

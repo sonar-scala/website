@@ -24,11 +24,6 @@ sonar-scala repository, which includes example projects for SBT _(`1.x`)_,
 Gradle _(`5.x`)_ and Maven _(`3.x`)_ along with basic instructions on how to
 execute SonarQube analysis for each of those projects without sbt-sonar.
 
-<div className="alert alert--warning" role="alert">
-  Running analysis from a Windows machine is currently not supported - please
-  use Linux or other Unix-like operating system.
-</div>
-
 ## Quick start
 
 Let's start off by adding the following sbt plugins to your Scala project, in
@@ -73,10 +68,13 @@ sbt -Dsonar.host.url=http://localhost \
 Once the scan completes successfully, you can navigate to
 http://localhost/projects to see the results.
 
-<div className="alert alert--info" role="alert">
-  This basic setup should report to SonarQube all of the useful Size, Coverage
-  and Test metrics in addition to raising any Scalastyle issues that were
-  identified in your project.
+This basic setup should report to SonarQube all of the useful Size, Coverage and
+Test metrics (listed [here](about/supported-metrics.mdx)) in addition to raising
+any Scalastyle issues that were identified in your project.
+
+<div className="alert alert--warning" role="alert">
+  Running analysis from a Windows machine is currently not supported - please
+  use Linux or other Unix-like operating system.
 </div>
 
 ## Scapegoat
