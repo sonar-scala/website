@@ -15,11 +15,9 @@ const features = [
       description: (
         <>
           Sonar-scala provides 65 built-in{" "}
-          <a href="http://www.scalastyle.org/http://www.scalastyle.org">
-            Scalastyle
-          </a>{" "}
-          inspections, which are automatically checked on SonarQube analysis -
-          no extra setup required.
+          <a href="http://www.scalastyle.org">Scalastyle</a> inspections, which
+          are automatically checked on SonarQube analysis - no extra setup
+          required.
         </>
       )
     },
