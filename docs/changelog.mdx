@@ -3,6 +3,41 @@ id: changelog
 title: Changelog
 ---
 
+## [7.9.0 LTS](https://github.com/mwz/sonar-scala/releases/tag/v7.9.0) - 11.01.2020
+
+Updated Scalastyle to
+[v1.1.0](https://github.com/beautiful-scala/scalastyle/releases/tag/v1.1.0),
+which brings the following changes:
+
+New Scalastyle rules:
+
+- New `ForLoopChecker` rule - omit braces if you have a `yield` clause,
+  otherwise, surround the contents with curly-braces, even if the contents are
+  only a single line.
+- New `WhileBraceChecker` rule - it's recommended to never omit braces when
+  using `while`.
+- New `CaseBraceChecker` rule - braces aren't required in `case` clauses.
+
+Scalastyle rule changes:
+
+- `HeaderMatchesChecker` has a new parameter `regex` to indicate whether to
+  treat the header string as a regular expression; defaults to `false`.
+- `MethodLengthChecker` has a new parameter `ignoreEmpty` to exclude empty lines
+  from being counted; defaults to `false`.
+- `ForBraceChecker` has a new parameter `singleLineAllowed` to indicate whether
+  a one-line `for` expressions with parentheses are allowed; defaults to
+  `false`.
+- `NonASCIICharacterChecker` has a new parameter `allowStringLiterals` to
+  indicate whether non-ASCII scripts in string literals should be allowed;
+  defaults to `false`.
+
+All of the above rules are activated with the default parameter values in the
+`Scalastyle`, `Scalastyle+Scapegoat` and the `Recommended by sonar-scala`
+quality profiles.
+
+([#342](https://github.com/mwz/sonar-scala/pull/342) -
+[@mwz](https://github.com/mwz))
+
 ## [7.8.0 LTS](https://github.com/mwz/sonar-scala/releases/tag/v7.8.0) - 23.12.2019
 
 - Implemented a new mode for pull request decoration. In this mode, sonar-scala
