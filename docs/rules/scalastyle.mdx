@@ -1,0 +1,23 @@
+---
+id: scalastyle
+title: Scalastyle
+---
+
+import Rules from "./Rules";
+import data from "./sonar-scala-metadata";
+
+export const rules = data.repositories["sonar-scala-scalastyle"].rules.filter(
+  rule => !rule.template
+);
+
+export const templates = data.repositories[
+  "sonar-scala-scalastyle"
+].rules.filter(rule => rule.template);
+
+## Rules
+
+<Rules rules={rules} />
+
+## Templates
+
+<Rules rules={templates} />

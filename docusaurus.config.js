@@ -1,3 +1,5 @@
+const path = require("path");
+
 module.exports = {
   title: "sonar-scala",
   tagline:
@@ -11,6 +13,7 @@ module.exports = {
     disableDarkMode: true,
     image: "img/logo.png",
     navbar: {
+      hideOnScroll: true,
       title: "sonar-scala",
       logo: {
         alt: "logo",
@@ -104,5 +107,6 @@ module.exports = {
         }
       }
     ]
-  ]
+  ],
+  plugins: [path.resolve(__dirname, "nofs.js")]
 };

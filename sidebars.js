@@ -29,6 +29,11 @@ module.exports = {
       ]
     },
     {
+      type: "category",
+      label: "Rules",
+      items: ["rules/scalastyle", "rules/scapegoat"]
+    },
+    {
       type: "doc",
       id: "changelog"
     }
