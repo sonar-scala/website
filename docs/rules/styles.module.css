@@ -1,0 +1,16 @@
+ol {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+ol > li {
+  border-bottom-width: 1px;
+  border-bottom-color: grey;
+  border-bottom-style: dashed;
+  margin-bottom: 2rem;
+}
+
+li:last-child {
+  margin-bottom: 0px;
+}
