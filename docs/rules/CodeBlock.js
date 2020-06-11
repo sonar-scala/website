@@ -8,8 +8,8 @@ class CodeBlock extends PureComponent {
     this.props = props;
     this.style = {
       fontFamily: "var(--ifm-font-family-base)",
-      backgroundColor: "var(--ifm-pre-background)",
-      border: 0
+      backgroundcolor: "var(--ifm-pre-background)",
+      border: 0,
     };
   }
 

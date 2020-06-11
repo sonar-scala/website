@@ -14,12 +14,12 @@ const features = [
       imageUrls: ["img/scalastyle.png"],
       description: (
         <>
-          sonar-scala provides 65 built-in{" "}
+          sonar-scala provides 69 built-in{" "}
           <a href="http://www.scalastyle.org">Scalastyle</a> inspections, which
           are automatically checked on SonarQube analysis - no extra setup
           required.
         </>
-      )
+      ),
     },
     {
       title: <>Support for Scapegoat</>,
@@ -32,8 +32,8 @@ const features = [
           issues in SonarQube based on your quality profile. There are 118
           Scapegoat inspections that are supported by sonar-scala.
         </>
-      )
-    }
+      ),
+    },
   ],
   [
     {
@@ -48,8 +48,8 @@ const features = [
           <code>Recommended by sonar-scala</code> profile, which is a subset of
           those that we recommend for the best results.
         </>
-      )
-    }
+      ),
+    },
   ],
   [
     {
@@ -65,8 +65,8 @@ const features = [
           <a href="https://etorreborre.github.io/specs2">Specs2</a> and turns
           those into test metrics in SonarQube.
         </>
-      )
-    }
+      ),
+    },
   ],
   [
     {
@@ -90,8 +90,8 @@ const features = [
           <a href="https://github.com/mwz/sbt-sonar">sbt-sonar</a>, you can be
           up and running and try out sonar-scala in a matter of minutes.
         </>
-      )
-    }
+      ),
+    },
   ],
   [
     {
@@ -105,7 +105,7 @@ const features = [
       ),
       imageUrls: [
         "img/pr-decoration-example.png",
-        "img/pr-decoration-status-check.png"
+        "img/pr-decoration-status-check.png",
       ],
       description: (
         <>
@@ -113,9 +113,9 @@ const features = [
           pull requests on GitHub and any new issues introduced in the code base
           will be posted as inline comments directly on the pull request.
         </>
-      )
-    }
-  ]
+      ),
+    },
+  ],
 ];
 
 function Feature({ imageUrls, codeSnippet, title, description }) {
