@@ -110,8 +110,9 @@ const features = [
       description: (
         <>
           sonar-scala can be run in a "decoration mode", which can analyse your
-          pull requests on GitHub and any new issues introduced in the code base
-          will be posted as inline comments directly on the pull request.
+          pull requests from GitHub and any new issues introduced in the
+          codebase will be posted as inline comments directly on the pull
+          request. GitHub Enterprise is also supported.
         </>
       ),
     },
