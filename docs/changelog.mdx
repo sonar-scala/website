@@ -3,6 +3,16 @@ id: changelog
 title: Changelog
 ---
 
+## [8.4.0](https://github.com/mwz/sonar-scala/releases/tag/v8.4.0) - 14.06.2020
+
+- Added support for PR decoration with GitHub Enterprise.
+  ([@jinwoo-k](https://github.com/jinwoo-k) -
+  [#434](https://github.com/mwz/sonar-scala/pull/434))  
+  sonar-scala now accepts the following optional property
+  `sonar.scala.pullrequest.github.apiurl`, which allows you to point it to your
+  instance of GitHub Enterprise, e.g. `https://github.mycompany.com/api/v3`.
+  This property defaults to the public GitHub API - `https://api.github.com`.
+
 ## [8.3.0](https://github.com/mwz/sonar-scala/releases/tag/v8.3.0) - 25.05.2020
 
 - Added support for SonarQube 8.3. ([@mwz](https://github.com/mwz) -

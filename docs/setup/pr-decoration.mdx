@@ -3,8 +3,9 @@ title: Pull Request Decoration
 ---
 
 Starting from version `7.8.0`, sonar-scala can be run in a decoration mode,
-which can analyse Github pull requests and make comments on any new issues
-directly on the pull request.
+which can analyse GitHub pull requests and make comments on any new issues
+directly on the pull request. Version `8.4.0` and later support
+[GitHub Enterprise](https://github.com/enterprise).
 
 This functionality is similar to what was provided by the
 [GitHub Plugin](https://docs.sonarqube.org/display/PLUG/GitHub+Plugin), which
@@ -57,6 +58,10 @@ run sonar-scala in decoration mode by setting the following properties:
   you generated in the previous step
 
 Optional:
+
+- **sonar.scala.pullrequest.github.apiurl** - specify GitHub API url for GitHub
+  Enterprise, e.g. `https://github.mycompany.com/api/v3`. This property defaults
+  to the public GitHub API - `https://api.github.com`.
 
 - **sonar.scala.pullrequest.dryrun** - execute PR decoration in "dry run" mode
   (sonar-scala will not post the results to Github). This setting is useful for
