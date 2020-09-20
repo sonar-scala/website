@@ -209,14 +209,31 @@ You can find there examples of projects using sbt 0.13 and 1.0, Scala 2.11,
 
 ## Changelog
 
+- **2.2.0** (05.07.2020) - Improve compatibility with
+  [SonarScala](https://docs.sonarqube.org/latest/analysis/languages/scala)
+  plugin ([#117](https://github.com/mwz/sbt-sonar/pull/117)).  
+  This release adds a new setting key (`sonarExpectSonarQubeCommunityPlugin`),
+  which allows toggling compatibility between
+  [sonar-scala](https://sonar-scala.com) and
+  [SonarScala](https://docs.sonarqube.org/latest/analysis/languages/scala)
+  plugins. This change is backwards compatible and the
+  `sonarExpectSonarQubeCommunityPlugin` setting is set to `true` by default. If
+  you're targeting the SonarScala plugin, toggling this setting to `false`
+  changes the default Scoverage and Scapegoat property names, i.e.:
+  - `sonar.scala.scoverage.reportPath` changes to
+    `sonar.scala.coverage.reportPaths`
+  - `sonar.scala.scapegoat.reportPath` changes to
+    `sonar.scala.scapegoat.reportPaths`
+- **2.1.1** (25.04.2020) - Fix missing sonar.projectVersion property
+  ([#104](https://github.com/mwz/sbt-sonar/pull/104)).
 - **2.1.0** (16.10.2019) - Allow to use `SONAR_HOST_URL` environment variable to
   define SonarQube instance URL instead of the `sonar.host.url` system property.
   If both values are present, the `sonar.host.url` system property takes
   precedence over the environment variable.
   ([sonar-scanner-api#69](https://github.com/SonarSource/sonar-scanner-api/pull/69))
 - **2.0.0** (17.06.2019) - Use an embedded sonar-scanner
-  ([#34](https://github.com/mwz/sbt-sonar/pull/34)) :confetti_ball:. This
-  version removes the dependency on having the standalone sonar-scanner-cli
+  ([#34](https://github.com/mwz/sbt-sonar/pull/34)) :confetti_ball:  
+  This version removes the dependency on having the standalone sonar-scanner-cli
   installed. To upgrade from 1.x please define the `sonar.host.url` property
   explicitly before running the `sonarScan` task (see the
   [Execute SonarQube section](#execute-sonarqube-scan) for more details). If you

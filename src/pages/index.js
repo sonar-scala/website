@@ -14,7 +14,7 @@ const features = [
       imageUrls: ["img/scalastyle.png"],
       description: (
         <>
-          sonar-scala provides 69 built-in{" "}
+          sonar-scala provides 70 built-in{" "}
           <a href="http://www.scalastyle.org">Scalastyle</a> inspections, which
           are automatically checked on SonarQube analysis - no extra setup
           required.
