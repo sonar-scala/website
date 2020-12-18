@@ -14,7 +14,7 @@
     "@mdx-js/runtime": "^1.6.5",
     "classnames": "^2.2.6",
     "dedent": "github:timhall/dedent",
-    "prismjs": "^1.20.0",
+    "prismjs": "^1.21.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-markdown": "^4.3.1",
