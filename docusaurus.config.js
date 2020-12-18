@@ -10,7 +10,9 @@ module.exports = {
   organizationName: "sonar-scala",
   projectName: "website",
   themeConfig: {
-    disableDarkMode: true,
+    colorMode: {
+      disableSwitch: true
+    },
     image: "img/logo.png",
     navbar: {
       hideOnScroll: true,
@@ -19,7 +21,7 @@ module.exports = {
         alt: "logo",
         src: "img/logo.svg"
       },
-      links: [
+      items: [
         {
           to: "docs/about/what-is-sonar-scala",
           label: "Docs",
