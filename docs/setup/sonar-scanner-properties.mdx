@@ -20,7 +20,7 @@ when running an analysis:
 - **sonar.scala.version** (optional) - defines the version of Scala used in your
   project (requires the `{major}.{minor}` versions and the patch version is
   ignored, defaults to `2.12`)
-- **sonar.scala.scoverage.reportPath** (optional) - relative path to the
+- **sonar.scala.coverage.reportPaths** (optional) - relative path to the
   scoverage report (defaults to
   `target/scala-${sonar.scala.version}/scoverage-report/scoverage.xml`)
 - **sonar.scala.scoverage.disable** (optional) - disables the Scoverage sensor
@@ -44,7 +44,7 @@ sonar-scanner \
   -Dsonar.tests=src/test/scala \
   -Dsonar.sourceEncoding=UTF-8 \
   -Dsonar.scala.version=2.12 \
-  -Dsonar.scoverage.reportPath=target/scala-2.12/scoverage-report/scoverage.xml \
+  -Dsonar.scala.coverage.reportPaths=target/scala-2.12/scoverage-report/scoverage.xml \
   -Dsonar.scapegoat.reportPath=target/scala-2.12/scapegoat-report/scapegoat.xml
 ```
 
