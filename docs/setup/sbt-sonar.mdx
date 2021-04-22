@@ -65,10 +65,10 @@ following set of **predefined** properties:
   defined by sbt)
 - **sonar.scala.version** - defines the version of Scala used in your project
   (i.e. `scalaVersion`)
-- **sonar.scala.scoverage.reportPath** - relative path to the scoverage report
-  (e.g. `target/scala-2.12/scoverage-report/scoverage.xml`)
-- **sonar.scala.scapegoat.reportPath** - relative path to the scapegoat report
-  (e.g. `target/scala-2.12/scapegoat-report/scapegoat.xml`)
+- **sonar.scala.coverage.reportPaths** - relative path to the scoverage report
+  (e.g. `target/scala-2.12/scoverage-report/scoverage.xml` or `target/scoverage-report/scoverage.xml`)
+- **sonar.scala.scapegoat.reportPaths** - relative path to the scapegoat report
+  (e.g. `target/scala-2.12/scapegoat-report/scapegoat-scalastyle.xml` or `target/scapegoat-report/scapegoat-scalastyle.xml` )
 
 Usually, the default settings are sufficient for majority of the projects and
 you rarely need to change any of them, unless your project is set-up in an
