@@ -1,0 +1,24 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: daily
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: "@docusaurus/core"
+    versions:
+    - 2.0.0-alpha.71
+    - 2.0.0-alpha.72
+    - 2.0.0-alpha.73
+  - dependency-name: "@docusaurus/preset-classic"
+    versions:
+    - 2.0.0-alpha.71
+    - 2.0.0-alpha.72
+    - 2.0.0-alpha.73
+  - dependency-name: react-markdown
+    versions:
+    - 6.0.0
+  - dependency-name: classnames
+    versions:
+    - 2.3.0
