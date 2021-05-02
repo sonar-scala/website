@@ -85,10 +85,10 @@ const features = [
       description: (
         <>
           Thanks to provided Docker{" "}
-          <a href="https://github.com/mwz/sonar-scala-docker">images</a> of
-          SonarQube with bundled sonar-scala and a dedicated sbt plugin,{" "}
-          <a href="https://github.com/mwz/sbt-sonar">sbt-sonar</a>, you can be
-          up and running and try out sonar-scala in a matter of minutes.
+          <a href="https://github.com/sonar-scala/sonar-scala-docker">images</a>{" "}
+          of SonarQube with bundled sonar-scala and a dedicated sbt plugin,{" "}
+          <a href="https://github.com/sonar-scala/sbt-sonar">sbt-sonar</a>, you
+          can be up and running and try out sonar-scala in a matter of minutes.
         </>
       ),
     },

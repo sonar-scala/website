@@ -29,7 +29,7 @@ module.exports = {
         },
         { to: "docs/changelog", label: "Changelog", position: "right" },
         {
-          href: "https://github.com/mwz/sonar-scala",
+          href: "https://github.com/sonar-scala/sonar-scala",
           label: "GitHub",
           position: "right",
         },
@@ -68,7 +68,7 @@ module.exports = {
           items: [
             {
               label: "GitHub",
-              href: "https://github.com/mwz/sonar-scala/issues",
+              href: "https://github.com/sonar-scala/sonar-scala/issues",
             },
             {
               label: "Chat on Gitter",
@@ -81,11 +81,11 @@ module.exports = {
           items: [
             {
               label: "sbt-sonar",
-              href: "https://github.com/mwz/sbt-sonar",
+              href: "https://github.com/sonar-scala/sbt-sonar",
             },
             {
               label: "sonar-scala-docker",
-              href: "https://github.com/mwz/sonar-scala-docker",
+              href: "https://github.com/sonar-scala/sonar-scala-docker",
             },
           ],
         },
