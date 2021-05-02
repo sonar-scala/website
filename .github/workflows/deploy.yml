@@ -16,7 +16,7 @@ jobs:
           echo "machine github.com login sonar-scala-bot password ${{ secrets.ACCESS_TOKEN }}" > ~/.netrc
       - uses: actions/setup-node@v1
         with:
-          node-version: 10.x
+          node-version: 14.x
       - run: npm install
       - run: ./inject-vars.sh
       - run: npm run deploy
