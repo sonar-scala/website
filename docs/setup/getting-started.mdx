@@ -2,6 +2,7 @@
 title: Getting Started
 ---
 
+import dedent from "dedent";
 import vars from "../../vars";
 
 For an out-of-the-box setup, you can use the following docker-compose recipe or
@@ -28,10 +29,12 @@ execute SonarQube analysis for each of those projects without sbt-sonar.
 Let's start off by adding the following sbt plugins to your Scala project, in
 the `./project/plugins.sbt` file:
 
-```scala
-addSbtPlugin("org.scoverage" % "sbt-scoverage" % "1.6.1")
-addSbtPlugin("com.github.mwz" % "sbt-sonar" % "${vars.sbtSonarVersion}")
-```
+<code className="language-scala">
+  {dedent`
+    addSbtPlugin("org.scoverage" % "sbt-scoverage" % "1.6.1")
+    addSbtPlugin("com.github.mwz" % "sbt-sonar" % "${vars.sbtSonarVersion}")
+  `}
+</code>
 
 We've added the [sbt-scoverage](https://github.com/scoverage/sbt-scoverage)
 plugin so that we can generate a coverage report and the
