@@ -1,12 +1,19 @@
-module.exports = function(context, options) {
+module.exports = function (context, options) {
   return {
     name: "nofs-plugin",
     configureWebpack(config, isServer, utils) {
       return {
-        node: {
-          fs: "empty"
-        }
+        resolve: {
+          alias: {
+            path: require.resolve("path-browserify"),
+          },
+          fallback: {
+            fs: false,
+            http: require.resolve("stream-http"),
+            https: require.resolve("https-browserify"),
+          },
+        },
       };
-    }
+    },
   };
 };

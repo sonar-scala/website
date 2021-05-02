@@ -11,7 +11,7 @@ module.exports = {
   projectName: "website",
   themeConfig: {
     colorMode: {
-      disableSwitch: true
+      disableSwitch: true,
     },
     image: "img/logo.png",
     navbar: {
@@ -19,29 +19,29 @@ module.exports = {
       title: "sonar-scala",
       logo: {
         alt: "logo",
-        src: "img/logo.svg"
+        src: "img/logo.svg",
       },
       items: [
         {
           to: "docs/about/what-is-sonar-scala",
           label: "Docs",
-          position: "right"
+          position: "right",
         },
         { to: "docs/changelog", label: "Changelog", position: "right" },
         {
           href: "https://github.com/mwz/sonar-scala",
           label: "GitHub",
-          position: "right"
+          position: "right",
         },
         {
           href: "https://gitter.im/sonar-scala/sonar-scala",
           label: "Chat",
-          position: "right"
-        }
-      ]
+          position: "right",
+        },
+      ],
     },
     prism: {
-      theme: require("prism-react-renderer/themes/github")
+      theme: require("prism-react-renderer/themes/github"),
     },
     sidebarCollapsible: false,
     footer: {
@@ -51,50 +51,50 @@ module.exports = {
           items: [
             {
               label: "About",
-              to: "docs/about/what-is-sonar-scala"
+              to: "docs/about/what-is-sonar-scala",
             },
             {
               label: "Get started",
-              to: "docs/setup/getting-started"
+              to: "docs/setup/getting-started",
             },
             {
               label: "Changelog",
-              to: "docs/changelog"
-            }
-          ]
+              to: "docs/changelog",
+            },
+          ],
         },
         {
           title: "Get help",
           items: [
             {
               label: "GitHub",
-              href: "https://github.com/mwz/sonar-scala/issues"
+              href: "https://github.com/mwz/sonar-scala/issues",
             },
             {
               label: "Chat on Gitter",
-              href: "https://gitter.im/sonar-scala/sonar-scala"
-            }
-          ]
+              href: "https://gitter.im/sonar-scala/sonar-scala",
+            },
+          ],
         },
         {
           title: "Related projects",
           items: [
             {
               label: "sbt-sonar",
-              href: "https://github.com/mwz/sbt-sonar"
+              href: "https://github.com/mwz/sbt-sonar",
             },
             {
               label: "sonar-scala-docker",
-              href: "https://github.com/mwz/sonar-scala-docker"
-            }
-          ]
-        }
+              href: "https://github.com/mwz/sonar-scala-docker",
+            },
+          ],
+        },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} sonar-scala. Built with Docusaurus.`
+      copyright: `Copyright © ${new Date().getFullYear()} sonar-scala. Built with Docusaurus.`,
     },
     googleAnalytics: {
-      trackingID: "UA-25197264-1"
-    }
+      trackingID: "UA-25197264-1",
+    },
   },
   presets: [
     [
@@ -102,13 +102,13 @@ module.exports = {
       {
         docs: {
           sidebarPath: require.resolve("./sidebars.js"),
-          editUrl: "https://github.com/sonar-scala/website/edit/master/"
+          editUrl: "https://github.com/sonar-scala/website/edit/master/",
         },
         theme: {
-          customCss: require.resolve("./src/css/custom.css")
-        }
-      }
-    ]
+          customCss: require.resolve("./src/css/custom.css"),
+        },
+      },
+    ],
   ],
-  plugins: [path.resolve(__dirname, "nofs.js")]
+  plugins: [path.resolve(__dirname, "nofs.js")],
 };

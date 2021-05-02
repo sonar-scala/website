@@ -2,7 +2,6 @@
 title: sbt-sonar
 ---
 
-import Prism from "../../scalaHighlight";
 import vars from "../../vars";
 
 [sbt-sonar](https://github.com/mwz/sbt-sonar) is an sbt plugin, which provides
@@ -38,9 +37,9 @@ the sonar-scanner executable installed in your environment.
 To install this plugin in your project, add the following to your
 `./project/plugins.sbt` file:
 
-<code className="language-scala">
-  {`addSbtPlugin("com.github.mwz" % "sbt-sonar" % "${vars.sbtSonarVersion}")`}
-</code>
+```scala
+addSbtPlugin("com.github.mwz" % "sbt-sonar" % "${vars.sbtSonarVersion}")
+```
 
 ## Usage
 
@@ -203,18 +202,17 @@ sonarUseSonarScannerCli := true
 
 Please see the
 [tests](https://github.com/mwz/sbt-sonar/tree/master/src/sbt-test/sbt-sonar)
-directory for some example projects.  
-You can find there examples of projects using sbt 0.13 and 1.0, Scala 2.11,
-2.12, a multi-module project and a project using an external properties file.
+directory for some example projects. You can find there examples of projects
+using sbt 0.13 and 1.0, Scala 2.11, 2.12, a multi-module project and a project
+using an external properties file.
 
 ## Changelog
 
 - **2.2.0** (05.07.2020) - Improve compatibility with
   [SonarScala](https://docs.sonarqube.org/latest/analysis/languages/scala)
-  plugin ([#117](https://github.com/mwz/sbt-sonar/pull/117)).  
-  This release adds a new setting key (`sonarExpectSonarQubeCommunityPlugin`),
-  which allows toggling compatibility between
-  [sonar-scala](https://sonar-scala.com) and
+  plugin ([#117](https://github.com/mwz/sbt-sonar/pull/117)). This release adds
+  a new setting key (`sonarExpectSonarQubeCommunityPlugin`), which allows
+  toggling compatibility between [sonar-scala](https://sonar-scala.com) and
   [SonarScala](https://docs.sonarqube.org/latest/analysis/languages/scala)
   plugins. This change is backwards compatible and the
   `sonarExpectSonarQubeCommunityPlugin` setting is set to `true` by default. If
@@ -232,10 +230,10 @@ You can find there examples of projects using sbt 0.13 and 1.0, Scala 2.11,
   precedence over the environment variable.
   ([sonar-scanner-api#69](https://github.com/SonarSource/sonar-scanner-api/pull/69))
 - **2.0.0** (17.06.2019) - Use an embedded sonar-scanner
-  ([#34](https://github.com/mwz/sbt-sonar/pull/34)) :confetti_ball:  
-  This version removes the dependency on having the standalone sonar-scanner-cli
-  installed. To upgrade from 1.x please define the `sonar.host.url` property
-  explicitly before running the `sonarScan` task (see the
+  ([#34](https://github.com/mwz/sbt-sonar/pull/34)) :confetti_ball: This version
+  removes the dependency on having the standalone sonar-scanner-cli installed.
+  To upgrade from 1.x please define the `sonar.host.url` property explicitly
+  before running the `sonarScan` task (see the
   [Execute SonarQube section](#execute-sonarqube-scan) for more details). If you
   want to fallback to the default behaviour from 1.x, which makes the plugin
   call through to the standalone sonar-scanner, you can set the
