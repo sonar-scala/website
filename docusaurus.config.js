@@ -43,7 +43,6 @@ module.exports = {
     prism: {
       theme: require("prism-react-renderer/themes/github"),
     },
-    sidebarCollapsible: false,
     footer: {
       links: [
         {
@@ -102,6 +101,7 @@ module.exports = {
       {
         docs: {
           sidebarPath: require.resolve("./sidebars.js"),
+          sidebarCollapsed: false,
           editUrl: "https://github.com/sonar-scala/website/edit/master/",
         },
         theme: {

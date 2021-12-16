@@ -9,19 +9,19 @@
     "deploy": "docusaurus deploy"
   },
   "dependencies": {
-    "@docusaurus/core": "^2.0.0-beta.0",
-    "@docusaurus/preset-classic": "^2.0.0-beta.0",
+    "@docusaurus/core": "2.0.0-beta.13",
+    "@docusaurus/preset-classic": "2.0.0-beta.13",
     "@mdx-js/runtime": "^1.6.22",
     "classnames": "^2.3.1",
     "dedent": "github:timhall/dedent",
     "https-browserify": "^1.0.0",
-    "imports-loader": "^3.0.0",
+    "imports-loader": "^3.1.1",
     "path-browserify": "^1.0.1",
-    "prismjs": "^1.23.0",
+    "prismjs": "^1.25.0",
     "react": "^17.0.2",
-    "react-dom": "^16.14.0",
+    "react-dom": "^17.0.2",
     "react-markdown": "^6.0.2",
-    "react-syntax-highlighter": "^15.4.3",
+    "react-syntax-highlighter": "^15.4.5",
     "stream-http": "^3.2.0"
   },
   "browserslist": {
