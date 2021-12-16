@@ -14,8 +14,8 @@ module.exports = {
         "about/what-is-sonar-scala",
         "about/supported-metrics",
         "about/quality-rules-and-profiles",
-        "about/compatibility-with-sonarqube"
-      ]
+        "about/compatibility-with-sonarqube",
+      ],
     },
     {
       type: "category",
@@ -24,18 +24,18 @@ module.exports = {
         "setup/getting-started",
         "setup/sonar-scanner-properties",
         "setup/sbt-sonar",
-        "setup/pr-decoration"
+        "setup/pr-decoration",
         // "setup/troubleshooting"
-      ]
+      ],
     },
     {
       type: "category",
       label: "Rules",
-      items: ["rules/scalastyle", "rules/scapegoat"]
+      items: ["rules/scalastyle", "rules/scapegoat"],
     },
     {
       type: "doc",
-      id: "changelog"
-    }
-  ]
+      id: "changelog",
+    },
+  ],
 };
