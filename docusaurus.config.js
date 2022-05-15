@@ -91,9 +91,6 @@ module.exports = {
       ],
       copyright: `Copyright © ${new Date().getFullYear()} sonar-scala. Built with Docusaurus.`,
     },
-    googleAnalytics: {
-      trackingID: "UA-25197264-1",
-    },
   },
   presets: [
     [
@@ -106,6 +103,13 @@ module.exports = {
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
+        },
+        gtag: {
+          trackingID: "GTM-TQFZXKB",
+          anonymizeIP: true,
+        },
+        googleAnalytics: {
+          trackingID: "UA-25197264-1",
         },
       },
     ],
